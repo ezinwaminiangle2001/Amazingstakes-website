@@ -344,12 +344,12 @@ body {
 .bg-footer {
   background-color: #000000;
   padding: 5px 0 30px;
-  margin-top: 80px;
-  padding-bottom: 30px
+  /* margin-top: 80px; */
+  padding-bottom: 30px;
 }
 
 .bg-footer .foot1 a img {
-  width: 250px;
+  width: 220px;
 }
 
 .bg-footer .footer-single {
@@ -418,42 +418,18 @@ body {
 }
 
 .bg-footer .footer-single p,.footer-single address {
-  color: #979797;
+  color: #e7e7e7;
   font-size: 14px;
   margin-top: 5px;
   line-height: 22px
 }
 
-.foot4 {
+/* .foot4 {
   border-top: 1px solid #2b3842;
   padding-top: 50px;
   margin-bottom: -15px;
-}
+} */
 
-.foot4 h5 {
-  text-align: center;
-  color: #dedede;
-  margin-top: 0;
-  font-family: montserrat,sans-serif;
-  font-weight: 400;
-  padding-bottom: 15px;
-}
-
-.foot4 ul {
-  padding: 0;
-  margin: 0 auto;
-  display: table;
-}
-
-.foot4 ul li {
-  list-style-type: none;
-  display: inline-block;
-  margin: 0 20px 15px
-}
-
-.foot4 ul li a img {
-  opacity: .4
-}
 
 
 
@@ -467,6 +443,24 @@ body {
 
 /* mobile screen */
 @media(max-width: 992px) {
+  .jumbotron.headBanner {
+    top: 5%;
+  }
+
+  .social-links-left {
+    top: 50%;
+    left: 93%;
+  }
+  
+  /* .top-soc li {
+    margin-bottom: 10px;
+  }
+
+  .top-soc li a i{
+    height: 50px;
+    padding: 20px 0;
+  } */
+
   .btn__hold {
       padding: 9px;
       flex-wrap: wrap
@@ -499,6 +493,11 @@ body {
   }
 }
 
+/* @media (min-width: 820px){
+  .social-links-left {
+    left: 92%;
+  }
+} */
 
 @media (max-width: 767px) {
   .hero-section {
@@ -508,7 +507,7 @@ body {
 
   .hero-section::before {
     height: auto;
-    min-height: 155%;
+    min-height: 75%;
   }
 
   .jumbotron.headBanner {
@@ -516,7 +515,7 @@ body {
   }
   
   .social-links-left {
-    left: 92%;
+    left: 90%;
     padding-left: 5px;
     transform: none;
   }
@@ -541,9 +540,22 @@ body {
   }
 }
 
+@media (max-width: 600px){
+  .hero-section::before {
+    height: auto;
+    min-height: 110%;
+  }
+}
+
 @media (max-width: 480px) {
+  .hero-section::before {
+    height: auto;
+    min-height: 100%;
+  }
+
   .social-links-left {
-    left: 85%;
+    left: 83%;
+    top: 40%;
     padding-left: 5px;
     transform: none;
   }

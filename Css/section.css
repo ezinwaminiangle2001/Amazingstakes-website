@@ -86,7 +86,7 @@ a {
     border: 1px solid #666666 !important;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>*, 
+.table-striped>tbody>tr:nth-of-type(odd)>*,
 .table-striped1>tbody>tr:nth-of-type(odd)>* {
     --bs-table-bg-type: #f5f9fa;
 }
@@ -236,13 +236,13 @@ a {
     font-weight: 400 !important;
 }
 
-.vp-pack h2{
+.vp-pack h2 {
     color: #000;
     font-size: 1.5rem !important;
     font-weight: 700;
 }
 
-.vp-pack .my-2{
+.vp-pack .my-2 {
     font-size: 1rem !important;
 }
 
@@ -287,13 +287,15 @@ a {
 .blog {
     display: flex;
     justify-content: center;
-    width: 100%; /* Full width for flexibility */
+    width: 100%;
+    /* Full width for flexibility */
 }
 
 .blog-row {
     width: 90% !important;
     flex-wrap: wrap;
-    justify-content: center; /* Center the content */
+    justify-content: center;
+    /* Center the content */
 }
 
 
@@ -313,9 +315,11 @@ a {
 .fa-check-circle {
     color: white;
 }
+
 .fa-times-circle {
     color: white;
 }
+
 .fa-circle {
     color: rgb(27, 27, 27)919818;
 }
@@ -337,7 +341,7 @@ a {
     padding: 4px 15px;
 }
 
-.tabs1 .nav-tabs>li>a.active{
+.tabs1 .nav-tabs>li>a.active {
     margin-right: 2px;
     line-height: 1.42857143;
     border: 1px solid transparent;
@@ -346,7 +350,7 @@ a {
     color: #FFFFFF;
 }
 
-.league-title{
+.league-title {
     padding: 2px 13px !important;
     color: #007bb5;
     /* background: #060321; */
@@ -359,7 +363,7 @@ a {
 }
 
 .info ul li h4 {
-    font-family: lato,sans-serif;
+    font-family: lato, sans-serif;
     color: #3f3e3e;
 }
 
@@ -384,6 +388,64 @@ a {
 }
 
 
+/* Styling for the Sponsors section */
+/* Container and Section */
+.sponsors-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.sponsors-section h5 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+/* Carousel Item Styling */
+.carousel-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.sponsors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sponsors-list li {
+    margin: 0 15px;
+    padding: 10px;
+    background-color: #24a4;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+/* Sponsor Links Styling */
+.sponsors-list li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sponsors-list li a:hover {
+    color: #000000;
+    text-decoration: underline !important;
+}
+
+
+
 
 
 
@@ -391,6 +453,14 @@ a {
 /* Align sections on smaller screens */
 
 @media (max-width: 978px) {
+    .blog-row {
+        width: 100% !important;
+    }
+
+    .blog-card {
+        margin-bottom: 20px;
+    }
+
     .storebox_icon {
         right: 25px;
         font-size: 4px;
@@ -417,15 +487,27 @@ a {
         text-align: center;
     }
 
+    .storeBox {
+        padding: 3px;
+        margin: 0px !important;
+    }
+
     .blog-row {
         width: 100% !important;
     }
 
-    .blog-card{
+    .blog-card {
         margin-bottom: 20px;
     }
-}
 
+    .blog .blog-card img {
+        height: 150px !important;
+    }
+
+    .win .p-12 {
+        padding: 0px;
+    }
+}
 
 @media (max-width: 600px) {
 
@@ -433,12 +515,64 @@ a {
         padding: 5px;
         border-radius: 5px;
     }
+
+    .blog-row {
+        width: 90% !important;
+    }
+
+    .blog .blog-card img {
+        height: 200px !important;
+    }
+
+    .win .p-12 {
+        padding: 0px;
+    }
+
 }
 
-
 @media (max-width: 480px) {
+
+    .tabs ul li a {
+        font-size: 12px;
+    }
+
+    .tabs .row {
+        display: flex !important;
+        flex-direction: column !important;
+
+    }
+
+    .tabs .row .nav-item {
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+
     .tip-m {
         margin-top: 12rem !important;
     }
 
+    .league-odds {
+        padding: 5px;
+    }
+
+    .win .p-12 {
+        padding: 0px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .sponsors-list {
+        flex-direction: column;
+    }
+
+    .sponsors-list li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .sponsors-list li {
+        margin: 0 10px;
+    }
 }
