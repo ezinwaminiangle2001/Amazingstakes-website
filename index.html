@@ -46,7 +46,7 @@
                                 <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./login.html">FREE PREDICTIONS</a>
+                                <a class="nav-link" href="#">FREE PREDICTIONS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">TIP STORES</a>
@@ -57,7 +57,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">LIVESCORE</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">SURE TIP</a>
                             </li>
                             <li class="nav-item">
@@ -65,7 +65,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">(HT) RESULTS</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="#">BLOG</a>
                             </li>
@@ -280,7 +280,7 @@
                           <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 
                             <!-- First Table -->
-                            <table class="table table-striped table-bordered myTableSmall text-center">
+                            <table class="table table-striped table-bordered table-striped myTableSmall text-center">
                               <thead>
                                 <tr>
                                   <th>Time</th>
@@ -323,7 +323,7 @@
                           
                           <div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                             <!-- Second Table -->
-                            <table class="table table-striped table-bordered myTableSmall text-center">
+                            <table class="table table-striped table-bordered table-striped myTableSmall text-center">
                               <thead>
                                 <tr>
                                   <th>Time</th>
@@ -390,6 +390,7 @@
         </section>
         <!-- tip section end -->
 
+        <!-- investment odd section start -->
         <section class="py-0" style="background-color: #212B46; background-image:url(./image/R\ \(4\).jpg); color: white; background-size: cover; background-repeat: no-repeat; border-top: 8px solid white; border-bottom: 8px solid white;">
             <div style="background: rgba(0,0,0,.7);">
                 <div class="container">
@@ -402,7 +403,7 @@
                             <h3>Today's Investment Odd</h3>
                             <br>
                             <div>
-                                <span class="blink_me" style="font-size: 2rem; color: yellow;">1.90</span>
+                                <span class="blink_me" style="font-size: 2rem; color: yellow;" id="blinkingOdd">1.90</span>
                             </div>
                             <br>
                             <div class="col-md-12">
@@ -416,46 +417,1211 @@
                             <div class="bg-light text-dark rounded p-3">
                                 <h3 class="text-center mb-3"><strong>Investment Tips</strong></h3>
                                 <center>
-                                    <h3 style="margin-top:30px"><strong>TOTAL ODDS: <span class="text-success">1.90</span></strong></h3>
-                                    <a href="https://betgaranteed.com/super_investment_tip" style="margin:9px">
+                                    <h3 style="margin-top:30px" id="totalOddsSection"><strong>TOTAL ODDS: <span class="text-success" id="totalOdds">1.90</span></strong></h3>
+                                    <a href="#" style="margin:9px" id="getAccessBtn">
                                         <button class="btn btn-md btn-success"><i class="fa fa-eye"></i> Get Access Now</button>
                                     </a>
                                 </center>
                                 <hr>
                                 <center>
                                     <div class="containerCT">
-                                        <h3 id="head" class="alert alert-warning" style="margin-top: -10px; margin-bottom: -10px;"><strong>Investment Tip Starts</strong></h3>
+                                        <h3 id="head" class="alert alert-danger" style="margin-top: -10px; margin-bottom: -10px;"><strong>Investment Tip Starts</strong></h3>
                                         <p id="timerdemo" style="margin-top: 20px; font-size: 2em;">3h: 51m: 30s</p>
-                                        <script>
-                                            var countDownDate = new Date("Oct 04, 2024 19:46:00").getTime();
-                                            var x = setInterval(function() {
-                                                var now = new Date().getTime();
-                                                var distance = countDownDate - now;
-                                                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                                                document.getElementById("timerdemo").innerHTML = hours + "h: " + minutes + "m: " + seconds + "s ";
-                                                if (distance < 0) {
-                                                    clearInterval(x);
-                                                    document.getElementById("timerdemo").innerHTML = "EXPIRED";
-                                                }
-                                            }, 1000);
-                                        </script>
                                     </div>
                                 </center>
 
-                                <h4 class="alert alert-warning text-center d-none">Today's Tip is coming soon!</h4>
+                                <h4 id="comingSoon" class="alert alert-warning text-center d-none">Today's Tip is coming soon!</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- investment odd section end -->
+
+        <!-- package section start -->
+         <section class="py-0">
+            <div class="container my-5 vp-pack">
+                <center>
+                    <h3 class="mb-2 black_bar">PACKAGES PLAN</h3>
+                </center>
+            
+                <div class="row align-items-center align-items-xl-stretch flex-column flex-xl-row justify-content-center">
+                    <!-- free Plan -->
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
+                            <h2>Free Plan</h2>
+                            <!-- <div class="my-2">
+                                <span class="fs-1 text-body-secondary fw-bold">$</span>
+                                <span class="fs-1 text-dark fw-bolder">49</span>
+                                <span class="fs-3 text-body-secondary">/mo</span>
+                            </div> -->
+                            <p class="lead">
+                                Access to 1.5 Odds Banker for free
+                            </p>
+                            <hr class="opacity-10">
+                            <h4 class="my-2">Features include:</h4>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Direct win prediction</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Sokafans / Correct Score</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Over1.5 / BTTS</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Double Chance</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>(HT) Result</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Mega / Midweek Jackpot</span>
+                            </div>
+                            <div class="mt-auto">
+                                <button class="btn btn-primary text-white mt-4 w-100">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Silver Plan -->
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
+                            <h2>Special Plan</h2>
+                            <!-- <div class="my-2">
+                                <span class="fs-1 text-body-secondary fw-bold">$</span>
+                                <span class="fs-1 text-dark fw-bolder">49</span>
+                                <span class="fs-3 text-body-secondary">/mo</span>
+                            </div> -->
+                            <p class="lead">
+                                Access to 3 Odds Banker for 1 Week
+                            </p>
+                            <hr class="opacity-10">
+                            <h4 class="my-2">Features include:</h4>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Sure 2</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Sure 3</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>5 ODDS</span>
+                            </div>
+                            <div class="mt-2 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>10 ODDS</span>
+                            </div>
+                            <div class="mt-auto">
+                                <button class="btn btn-primary text-white mt-4 w-100">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Gold Plan -->
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
+                            <h2>Vip Plan</h2>
+                            <!-- <div class="my-2">
+                                <span class="fs-1 text-body-secondary fw-bold">$</span>
+                                <span class="fs-1 text-dark fw-bolder">79</span>
+                                <span class="fs-3 text-body-secondary">/mo</span>
+                            </div> -->
+                            <p class="lead">
+                                Access to 5 - 10 Odds Daily
+                            </p>
+                            <hr class="opacity-10">
+                            <h4 class="my-2">All features of Silver Plan plus:</h4>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Over 2.5 /Draw</span>
+                            </div>
+
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>HalfTime/FullTime</span>
+                            </div>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Combo</span>
+                            </div>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>(HT) Goals</span>
+                            </div>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Most Scoring Half</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <button class="btn btn-primary text-white mt-4 w-100">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Diamond Plan -->
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
+                            <h2>Investment Plan</h2>
+                            <!-- <div class="my-2">
+                                <span class="fs-1 text-body-secondary fw-bold">$</span>
+                                <span class="fs-1 text-dark fw-bolder">129</span>
+                                <span class="fs-3 text-body-secondary">/mo</span>
+                            </div> -->
+                            <p class="lead">
+                                Sure 1.60 - 2.50 Odds Daily
+                            </p>
+                            <hr class="opacity-10">
+                            <h4 class="my-2">All features of Gold Plan plus:</h4>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Rollover (1.30-2.00)</span>
+                            </div>
+                            <div class="my-1 text-body-secondary">
+                                <span class="text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
+                                    </svg>
+                                </span>
+                                <span>Investment (2.10-3.50)</span>
+                            </div>
+                            
+                            <div class="mt-auto">
+                                <button class="btn btn-primary text-white mt-4 w-100">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+         </section>
+        <!-- package section end -->
+
+        <!-- popular section start -->
+          <section class="py-0">
+            <div class="container nopaddingsmall">
+                <div class="pb-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="store_header"><span class="text">POPULAR CATEGORIES</span></h3>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    GG/BTTS
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Double Chance
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Over 1.5
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Over 2.5
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    3.5 Goals
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Draws
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Win Either Half
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Super Single
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    0.5 HT
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Sure 2
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Sure 3
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Sure 5
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Sure 10
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Correct Score
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    Banker
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-sm-3 col-6 mb-3">
+                            <a href="#">
+                                <div class="storeBox">
+                                    VIP TIPS &nbsp;<i class="fa fa-lock"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          </section>
+        <!-- popular section end -->
+
+        <!-- Blog Section Start -->
+        <section class="p">
+            <div class="container">
+                <div class="row">
+                    <center>
+                        <h5 class="mb-2 black_bar">Sports News</h5>
+                    </center>
+                    <div class="col-lg-12 col-sm-12 border-left-dt p-0 mb-4">
+                        <div class="blog pt-2 px-1 pb-2">
+                            <div class="row justify-content-center no-margin-0 blog-row">
+                                <!-- Blog Post Card for Larger Screens -->
+                                <div class="col-lg-4">
+                                    <div class="card blog-card">
+                                        <div class="row">
+                                            <div class="blog-img-wrap col-12">
+                                                <a href="#">
+                                                    <img src="./image/skysports-football-europa-league_6669005.jpg" alt="Europa League 2024/25 explained" class=" rounded width-100" style="height: 180px; width: 100%;">
+                                                </a>
+                                            </div>
+                                            <div class="col-12 px-1 pt-2">
+                                                <div class="blog-title-wrap pl-2 pr-0">
+                                                    <h4>
+                                                        <a href="#">
+                                                            <p class="d-sm-block mb-1">Europa League 2024/25 explained: Everything you need to know...</p>
+                                                        </a>
+                                                        <a href="#">
+                                                            <button class="btn btn-danger btn-sm">Load More</button>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="card blog-card">
+                                        <div class="row">
+                                            <div class="blog-img-wrap col-12">
+                                                <a href="#">
+                                                    <img src="./image/guido-726.jpg" alt="Europa League 2024/25 explained" class=" rounded width-100" style="height: 180px; width: 100%;">
+                                                </a>
+                                            </div>
+                                            <div class="col-12 px-1 pt-2">
+                                                <div class="blog-title-wrap pl-2 pr-0">
+                                                    <h4>
+                                                        <a href="#">
+                                                            <p class="d-sm-block mb-1">West Ham United sign Argentinian World Cup winner Guido Rodríguez...</p>
+                                                        </a>
+                                                        <a href="#">
+                                                            <button class="btn btn-danger btn-sm">Load More</button>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="card blog-card">
+                                        <div class="row">
+                                            <div class="blog-img-wrap col-12">
+                                                <a href="#">
+                                                    <img src="./image/Osimhen.webp" alt="Europa League 2024/25 explained" class=" rounded width-100" style="height: 180px; width: 100%;">
+                                                </a>
+                                            </div>
+                                            <div class="col-12 px-1 pt-2">
+                                                <div class="blog-title-wrap pl-2 pr-0">
+                                                    <h4>
+                                                        <a href="#">
+                                                            <p class="d-sm-block mb-1">Transfer: Victor Osimhen wants to join Arsenal, no...   </p>
+                                                        </a>
+                                                        <a href="#">
+                                                            <button class="btn btn-danger btn-sm">Load More</button>
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- Blog section end -->
+
+        <!-- accum section star -->
+        <section class="accum-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12" style="background-color: #FFFFFF;">
+                        <!-- Title Section -->
+                        <div class="store_header text-center">
+                            <h2>Friday 10 2024 ACCUMULATOR TIPS</h2>
+                        </div>
+                      <div class="tabs">
+                        <!-- Tab Navigation -->
+                        <ul class="nav nav-tabs justify-content-center" role="tablist" style="padding-top: 0px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="tab-over1_5-tab" data-bs-toggle="tab" href="#tab-over1_5" role="tab" aria-controls="tab-over1_5" aria-selected="true">Over 1.5</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-double-chance-tab" data-bs-toggle="tab" href="#tab-double-chance" role="tab" aria-controls="tab-double-chance" aria-selected="false">Double Chance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-btts-tab" data-bs-toggle="tab" href="#tab-btts" role="tab" aria-controls="tab-btts" aria-selected="false">BTTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-halftime-tab" data-bs-toggle="tab" href="#tab-halftime" role="tab" aria-controls="tab-halftime" aria-selected="false">HalfTime Results</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-over2_5-tab" data-bs-toggle="tab" href="#tab-over2_5" role="tab" aria-controls="tab-over2_5" aria-selected="false">Over 2.5</a>
+                            </li>
+                        </ul>
         
+                        <!-- Tab Content -->
+                        <div class="tab-content mt-3">
+                            <!-- Over 1.5 ACCUMULATOR -->
+                            <div class="tab-pane fade show active" id="tab-over1_5" role="tabpanel" aria-labelledby="tab-over1_5-tab">
+                                <h4 class="text-center">Over 1.5 ACCUMULATOR</h4>
+                                <table class="table table-bordered table-striped1 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>League</th>
+                                            <th>Match</th>
+                                            <th>Time</th>
+                                            <th>Prediction</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BUL D1</td>
+                                            <td>Krumovgrad vs CSKA 1948 Sofia</td>
+                                            <td>13:30</td>
+                                            <td>Over 1.5</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FIN D1</td>
+                                            <td>VPS vs Ilves</td>
+                                            <td>16:00</td>
+                                            <td>Over 1.5</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KSA D1</td>
+                                            <td>Al Riyadh vs Al Qadisiya</td>
+                                            <td>16:15</td>
+                                            <td>Over 1.5</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
         
+                            <!-- Double Chance ACCUMULATOR -->
+                            <div class="tab-pane fade" id="tab-double-chance" role="tabpanel" aria-labelledby="tab-double-chance-tab">
+                                <h4 class="text-center">Double Chance ACCUMULATOR</h4>
+                                <table class="table table-bordered table-striped1 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>League</th>
+                                            <th>Match</th>
+                                            <th>Time</th>
+                                            <th>Prediction</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ALG D1</td>
+                                            <td>Olympique Akbou vs Saoura</td>
+                                            <td>16:00</td>
+                                            <td>1X</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ALG D1</td>
+                                            <td>ES Setif vs Magra</td>
+                                            <td>16:00</td>
+                                            <td>1X</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ROM D1</td>
+                                            <td>UTA Arad vs Petrolul</td>
+                                            <td>16:00</td>
+                                            <td>1X</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <!-- BTTS ACCUMULATOR -->
+                            <div class="tab-pane fade" id="tab-btts" role="tabpanel" aria-labelledby="tab-btts-tab">
+                                <h4 class="text-center">BTTS ACCUMULATOR</h4>
+                                <table class="table table-bordered table-striped1 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>League</th>
+                                            <th>Match</th>
+                                            <th>Time</th>
+                                            <th>Prediction</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>FIN D1</td>
+                                            <td>VPS vs Ilves</td>
+                                            <td>16:00</td>
+                                            <td>BTTS</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <!-- HalfTime Results ACCUMULATOR -->
+                            <div class="tab-pane fade" id="tab-halftime" role="tabpanel" aria-labelledby="tab-halftime-tab">
+                                <h4 class="text-center">HalfTime Results ACCUMULATOR</h4>
+                                <table class="table table-bordered table-striped1 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>League</th>
+                                            <th>Match</th>
+                                            <th>Time</th>
+                                            <th>Prediction</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>BUL D1</td>
+                                            <td>Arda vs Beroe</td>
+                                            <td>15:30</td>
+                                            <td>1X (HT)</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CRO D1</td>
+                                            <td>Istra 1961 vs Osijek</td>
+                                            <td>17:00</td>
+                                            <td>X2 (HT)</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+        
+                            <!-- Over 2.5 ACCUMULATOR -->
+                            <div class="tab-pane fade" id="tab-over2_5" role="tabpanel" aria-labelledby="tab-over2_5-tab">
+                                <h4 class="text-center">Over 2.5 ACCUMULATOR</h4>
+                                <table class="table table-bordered table-striped1 text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>League</th>
+                                            <th>Match</th>
+                                            <th>Time</th>
+                                            <th>Prediction</th>
+                                            <th>Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>GER D2</td>
+                                            <td>Paderborn vs Regensburg</td>
+                                            <td>17:30</td>
+                                            <td>Over 2.5</td>
+                                            <td>-:-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>                
+        <!-- accum section end -->
+        
+        <!-- recent win section start -->
+        <section class="py-0" style="border-top: 4px solid #b28e0b">
+            <div class="container">
+                <div class="col-md-12 col-md-offset-1">
+                    <br>
+                    <div class="row">
+                        <!-- Recent Winnings Section -->
+                        <div class="col-sm-6">
+                            <h4 class="text-center mb-4 mt-3">Recent Winnings</h4>
+                            <div class="league-odds">
+                                <table class="table table-striped table-bordered text-center">
+                                    <thead>
+                                        <tr style="background: #b28e0b; color: #060321; font-size: 12px;">
+                                            <th class="text-center">DATE</th>
+                                            <th class="text-center">STARTER</th>
+                                            <th class="text-center">PRO</th>
+                                            <th class="text-center">SPECIAL</th>
+                                            <th class="text-center">WEEKEND BLAST</th>
+                                            <th class="text-center">CORRECT SCORES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>02/10</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>03/10</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: gray;">
+                                                <i class="fa-regular fa-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>29/09</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: gray;">
+                                                <i class="fa-regular fa-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>27/09</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>25/09</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>24/09</td>
+                                            <td style="background: gray;">
+                                                <i class="fa-regular fa-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: red;">
+                                                <i class="fa fa-times-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: red;">
+                                                <i class="fa fa-times-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: gray;">
+                                                <i class="fa-regular fa-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>23/09</td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                            <td style="background: #060321;">
+                                                <i class="fa fa-check-circle fa-2x"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+        
+                        <!-- Top Scorers Section -->
+                        <div class="col-sm-6">
+                            <h4 class="text-center mb-4 mt-3">Top Scorers</h4>
+                            <div class="league-odds">
+                              <div class="tabs1">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation">
+                                        <a href="#premier_league" class="active" aria-controls="premier_league" role="tab" data-toggle="tab">EPL</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#laliga" aria-controls="laliga" role="tab" data-toggle="tab">SPA</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#bundesliga" aria-controls="bundesliga" role="tab" data-toggle="tab">GER</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#ligue" aria-controls="ligue" role="tab" data-toggle="tab">FRA</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#series" aria-controls="series" role="tab" data-toggle="tab">ITA</a>
+                                    </li>
+                                </ul>
+        
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane show active" id="premier_league">
+                                        <br>
+                                        <div class="row">
+                                        <span class="league-title col-md-12">Premier League</span></div><br>
+                                        <table class="table table-striped1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player</th>
+                                                    <th>Goals (G)</th>
+                                                    <th>Matches Played (M)</th>
+                                                    <th>Assists (A)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Erling Haaland</td>
+                                                    <td>10</td>
+                                                    <td>8</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mohamed Salah</td>
+                                                    <td>8</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Harry Kane</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Marcus Rashford</td>
+                                                    <td>6</td>
+                                                    <td>8</td>
+                                                    <td>4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                            
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="laliga">
+                                        <br>
+                                        <div class="row">
+                                        <span class="league-title col-md-12">Laliga League</span></div><br>
+                                        <table class="table table-striped1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player</th>
+                                                    <th>Goals (G)</th>
+                                                    <th>Matches Played (M)</th>
+                                                    <th>Assists (A)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Robert Lewandowski</td>
+                                                    <td>9</td>
+                                                    <td>8</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Karim Benzema</td>
+                                                    <td>7</td>
+                                                    <td>7</td>
+                                                    <td>1</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                            
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="bundesliga">
+                                        <br>
+                                        <div class="row">
+                                        <span class="league-title col-md-12">Bundesliga League</span></div><br>
+                                        <table class="table table-striped1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player</th>
+                                                    <th>Goals (G)</th>
+                                                    <th>Matches Played (M)</th>
+                                                    <th>Assists (A)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Harry Kane</td>
+                                                    <td>9</td>
+                                                    <td>7</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Niclas Füllkrug</td>
+                                                    <td>6</td>
+                                                    <td>8</td>
+                                                    <td>2</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="series">
+                                        <br>
+                                        <div class="row">
+                                        <span class="league-title col-md-12">Series League</span></div><br>
+                                        <table class="table table-striped1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player</th>
+                                                    <th>Goals (G)</th>
+                                                    <th>Matches Played (M)</th>
+                                                    <th>Assists (A)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Victor Osimhen</td>
+                                                    <td>8</td>
+                                                    <td>7</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Giovanni Simeone</td>
+                                                    <td>6</td>
+                                                    <td>7</td>
+                                                    <td>2</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="ligue">
+                                        <br>
+                                        <div class="row">
+                                        <span class="league-title col-md-12">Ligue League</span></div><br>
+                                        <table class="table table-striped1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Player</th>
+                                                    <th>Goals (G)</th>
+                                                    <th>Matches Played (M)</th>
+                                                    <th>Assists (A)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kylian Mbappé</td>
+                                                    <td>10</td>
+                                                    <td>8</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alexis Sanchez</td>
+                                                    <td>7</td>
+                                                    <td>7</td>
+                                                    <td>2</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <br> <br>
+
+                <div class="info col-md-12">
+                    <ul>
+                        <li>
+                            <h4>BEST FREE SOCCER PREDICTIONS</h4>
+                            <p>Amazingstakes is the best site to visit if you're looking for the best free football predictions to boost your winnings. Amazingstakes is the most reliable and best football prediction site offering free football predictions for a wide variety of sports and competitions. Here you will find the top football expectations for any football competition on Amazingstakes, including the UEFA Champions League (Champions), English Premier League (Ligue 1), France League 1 and more.
+                                
+                            </p>
+                            <h4>Accurate Football Prediction Site</h4>
+                            <p>Accurate predictions give you an edge by helping you identify favorable bets. When you bet on outcomes that are more likely to occur, your chances of winning increase. <br>The term “<strong><a href="">Accurate Prediction</a></strong> with amazing stakes” refers to predictions that accurately reflect the actual outcomes of sporting events. A sports betting expert’s sports betting predictions are the result of careful analysis, statistical models, historical data, and expertise. When you can rely on a reputable source that consistently delivers top-notch predictions, it becomes one of the most important tools in your sports betting arsenal. <br>Confidence Boost: Imagine placing bets with confidence, knowing that your predictions are backed by solid analysis. Accurate predictions boost your confidence and reduce uncertainty.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>3 Sure Draws Prediction</h4>
+                            <p>Football betting is exciting and involves strategy and luck. Predicting draws, a less common but profitable bet, might seem odd since the aim is to bet on winners. However, <a href="draw">3 Sure Draws Prediction</a> are more common than you think, and learning to predict them can lead to steady income. This guide will cover everything you need to know about predicting draws, from the basics to advanced strategies, with help from experts at Amazingstakes.</p>
+                            <h4>Sure Straight Win for Today</h4>
+                            <p>When it comes to betting, the ultimate goal is to win, and consistently winning requires more than just luck. If you're looking to make a surefire profit today, a <strong>"Sure Straight Win"</strong> might be just what you need. At Amazingstakes, we're here to help you navigate the often unpredictable world of sports betting with our expertly analyzed predictions, designed to give you the best chance at success.</p>
+                            <h4>Free VIP Tips Today Amazingstakes</h4>
+                            <p>Amazingstakes isn’t just any betting platform; it’s a one-stop shop for all your betting needs. Whether you’re looking for free VIP tips today or a long-term betting strategy, Amazingstakes has got you covered. The platform is designed with the user in mind, offering an intuitive interface, a wealth of resources, and, of course, the best VIP tips in the business. <br> In the world of betting, knowledge is power, and VIP tips are your secret weapon. With Amazingstakes, you get access to free VIP tips today that can make all the difference in your betting journey. Whether you’re into football, basketball, or tennis, Amazingstakes has got you covered with expert tips that are designed to help you win. So why wait? Sign up today and start making smarter, more informed bets.</p>
+                        </li>
+                        <li>
+                            <h4>REAL FOOTBALL PREDICTION | FOOTBALL BETTING TIPS TODAY</h4>
+                            <p>AMAZINGSTAKES offers free precise football predictions, comes about, measurements, best tips, and valuable forecasts exhortation to clients. We have more than 120 worldwide football alliances to choose from, and fulltime-predict gives clients with up to 20,000 expectations per season! Moreover, we spread the best offers from bookmarkers in your country. As contradicted to posting each bookmarking site, we as it were highlight solid ones.</p>
+                            <p>Not at all like other football prediction websites, we reliably give amazing football picks and forecasts with the highest level of exactness. To extend your chances of winning wagers, we offer a wide range of football coordinate forecasts and proposals. You'll be able involvement a 100% winning rate with our site. Thus, Amazingstakes is the site to visit in case you're seeking out for sources for trusted prediction site.</p>
+                        </li>
+                        <li>
+                            <h4>Free Football Prediction Site: Get Winning Tips and Predictions for Your Next Bet</h4>
+                            <p>Are you tired of losing your wagers? See no encourage than our <strong>betarazzi predictions for today</strong>! Our master tipsters offer exact and personalized expectations for your another wagered. Whether you're looking for direction on your following aggregator or seeking out for the finest chances on a particular coordinate, we have the apparatuses you would like to succeed.<br> Free Football Tips and Expectations:Our master tipsters give free football tips and predictions for a wide range of alliances and competitions. Stakegains we have the bits of knowledge you would like to create educated wagering choices.<br> At Amazingstakes, "Sites that predict football matches correctly," We accept that everybody has the potential to win huge. With our master direction and personalized forecasts, you'll open your full potential and accomplish your wagering objectives. Visit us to access our top 5 predictions today, urge begun!</p>
+                        </li>
+                        <li>
+                            <h4>THE USES OF MULTIPLE SOCCER PREDICTION SITES</h4>
+                            <p>The foremost critical advantage of utilizing numerous football prediction websites is simply can stake your recommendations with the finest market among them. On the off chance that you're unused to online sports expectation, you ought to know that not all platforms are created rise to when it comes to chances comparison. There may well be a assortment of reasons for this, but it as a rule bubbles down to what the location anticipates the result to be and how much cash they have coming in on either side of the stake.</p>
+                            <p>This has continuously happened, and the contrasts are minor. Since lines contrast between online sportsbooks, it's a great thought to shop for bets. By using this playing method, you'll guarantee that you're getting the most prominent chances to bet. Which means that in case you make the correct choice, you'll benefit more. In the event that you employ various sports websites to shop your lines, you may be able to boost your long-term sports playing profit by not taking off cash on the table. You might advantage from utilizing more than one online sports location. <strong>666 correct score prediction</strong><br> <br><a href="https://www.amazingstakes.com/news/utilising-betting-tools-and-resources/">Discover how to use advanced tools and applications to improve your decision-making and eliminate doubt during online betting.</a></p>
+                        </li>
+                        <li>
+                            <h4>Winning Prediction Site</h4>
+                            <p>Are you looking for a <strong>Tips for win</strong> and accurate football prediction site that consistently delivers hot tips? Look no further! Amazingstakes is renowned for providing the best football predictions, crafted by experts with an in-depth understanding of the game, with our <a href="soccervista-prediction">Soccervista</a> and <strong>daily 98 winning tips</strong> <br>Our dedicated team analyzes various factors such as team form, head-to-head records, and player statistics to bring you predictions you can count on. With a track record of success, our site is the go-to destination for bettors seeking reliable insights. <strong>Winning Prediction Site</strong></p>
+                        </li>
+                        <li>
+                            <h4>SHOULD I TRUST PREDICTION SITES?</h4>
+                            <p>Yes! Usually a great question. But, are you pondering in case football expectation locales really work? In case you've visited football expectation administrations, you're likely energetic to form a few money without having to spend time analyzing and evaluating the counsel. When searching for the foremost great forecast site BETARAZI, you may take note that numerous of them show up genuine and respectable. But take note of one point. In the event that they emphasize forceful promoting strategies, you ought to slap a yellow light on the location some time recently continuing. That suggests you must utilize extraordinary caution whereas assessing their recommendations. Such forceful showcasing can be judged by their words as well as other components such as what they guarantee and how much they offer.</p>
+                            <p>In spite of the fact that numerous bettors have won huge entireties of cash, the challenge here is how to demonstrate the free football expectations. The larger part of soccer expectation administrations endeavor to draw in clients by illustrating their authenticity, ordinarily by giving photos of won tickets such as fixed matches and so on. But how do you tell in the event that the site is honest to goodness? The larger part of players drop into this trap since they don't cross-check. In spite of the fact that it may take a few time, it is judicious to cross-reference these sorts of websites with solid third-party locales and incorporate them on the list of suggested websites. On the off chance that you can't find any, draw your possess conclusions. The more you look, the more likely it is simply will discover an answer to your address. The issue is that the web could be a domestic for both great and loathsome things. That's why you ought to do inquire about and console yourself some time recently depending on a single site. Conduct a few investigate and studied client surveys and open positive input on the web. Your best chance is to go with websites that have earned positive criticism. It is more
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- recentwin section end -->
+
+        <!-- footer section start -->
+        <footer class="bg-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="foot1 footer-single">
+                            <a href="#"><img src="./image/logo-a.svg" alt="Best Prediction Site"></a>
+
+                            <div class="foot2-32 foot-pop foot-com">
+                                <h2 class="footer-title">Little About Us</h2>
+                                <p>Amazingstakes provides predictions for all categories of customers, with <strong>everyday winning tips</strong> offered for free to bettors looking for free football predictions. Amazingstakes is one of the most trusted prediction sites, and we take pride in being the best. Our football predictions are so accurate that we charge for them. We specialize in football games with low odds, including Sure 2, Sure 3, 5 &amp; 10 Odds. If there was an honor for the best football prediction site, we would undoubtedly win. When compared to other football prediction websites, we have the best success rate. We are known for our level of accuracy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="col-sm-12 left-clear right-clear footer-single footer-project">
+                            <div class="footer-title">
+                                <h2>Quick Links</h2>
+                            </div>
+                            <ul class="list-unstyled" style="text-transform: uppercase">
+                                <li><a href="">My Account <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">About Us <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Frequently Asked Questions <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Terms &amp; Conditions <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Disclaimer <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Refund Policy <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Adverts <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Blog <i class="fa fa-angle-right pull-right"></i></a></li>
+                                <li><a href="#">Partners <i class="fa fa-angle-right pull-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-single">
+                            <div class="footer-title">
+                                <h2>Contact &amp; Support</h2>
+                            </div>
+                            <address style="line-height: 30px;">
+                                <strong style="font-weight: 600!important;">No, 2 Behind Imman Filling Station Songo Ilorin, Kwara State</strong><br>
+                                <i class="fa fa-phone"></i> +2348135364799<br>
+                                <strong>Whatsapp Only</strong>
+                                <span style="color:#0dca4593"><i class="fab fa-whatsapp"></i> +2348135364799</span><br>
+                                <strong>Email Address</strong><br>
+                                <i class="fa fa-envelope"></i> <a href="mailto:support@amazingstakes.com">support@amazingstakes.com</a><br>
+                                <i class="fa fa-envelope"></i> <a href="mailto:advert@amazingstakes.com">advert@amazingstakes.com</a>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="row"></div>
+                        <div class="col-md-12 foot4">
+                            <h5>Sponsors</h5>
+                            <ul>
+                                <li><a target="_blank" href="https://freewinningtips.com/">FreeWinningTips</a></li>
+                                <li><a target="_blank" href="https://www.betarazi.com/">Betarazi</a></li>
+                                <li><a target="_blank" href="https://www.worldtechmakers.com">Xoilac</a></li>
+                                <li><a target="_blank" href="https://battlefestleague.com">Truc Tiep Bong Da Socolive</a></li>
+                                <li><a target="_blank" href="https://sunwin.estate">Sunwin</a></li>
+                                <li><a target="_blank" href="https://gamebaidoithuong6.com/game-no-hu-doi-thuong/">nổ hũ</a></li>
+                                <li><a target="_blank" href="https://tai-xiu-online.com/">tài xỉu</a></li>
+                                <li><a target="_blank" href="https://intelligentgiving.com/">kubet</a></li>
+                                <li><a target="_blank" href="https://bj88app.top/">bj88</a></li>
+                                <li><a target="_blank" href="https://146.190.201.208/">website hi88</a></li>
+                                <li><a href="https://one88.icu/" title="one88">one88</a></li>
+                                <li><a target="_blank" href="https://gamebai88.fun" title="game bài đổi thưởng">game bài đổi thưởng</a></li>
+                                <li><a target="_blank" href="https://mitom.info/" title="mitom">mitom</a></li>
+                                <li><a target="_blank" href="https://pacoveredbridges.com/" title="Go88">Go88</a></li>
+                                <li><a target="_blank" href="https://bongdaz.net/nhan-dinh/" title="nhan dinh bong da">nhan dinh bong da</a></li>
+                                <li><a target="_blank" href="https://may88club.bet/" title="May88">May88</a></li>
+                                <li><a target="_blank" href="https://j88.bike/" title="J88">J88</a></li>
+                                <li><a target="_blank" href="https://bk8vn.one" title="BK8">BK8</a></li>
+                                <li><a target="_blank" href="https://f8betht.baby/" title="F8bet">F8bet</a></li>
+                                <li><a target="_blank" href="https://hi88.gives" title="hi88">hi88</a></li>
+                                <li><a target="_blank" href="https://f8bet.net.in" title="F8bet">F8bet</a></li>
+                                <li><a target="_blank" href="https://u888.training/" title="https://u888.training/">https://u888.training/</a></li>
+                                <li><a target="_blank" href="https://topnohu.baby/" title="https://topnohu.baby/">https://topnohu.baby/</a></li>
+                                <li><a target="_blank" href="https://fun88.work/" title="https://fun88.work/">https://fun88.work/</a></li>
+                                <li><a target="_blank" href="https://789bethv.com/" title="https://789bethv.com/">https://789bethv.com/</a></li>
+                                <li><a target="_blank" href="https://jun88.soccer/" title="https://jun88.soccer/">https://jun88.soccer/</a></li>
+                                <li><a target="_blank" href="https://vn88-vn.com/" title="VN88">VN88</a></li>
+                                <li><a target="_blank" href="https://typhu88-vn.com" title="Typhu88">Typhu88</a></li>
+                                <li><a target="_blank" href="https://hi88com.biz/" title="hi88">hi88</a></li>
+                                <li><a target="_blank" href="https://have8.tv/" title="KUBE11">KUBET11</a></li>
+                                <li><a target="_blank" href="https://ripromise.com/" title="KUBET777">KUBET777</a></li>
+                                <li><a target="_blank" href="https://hi88o.com/" title="hi88">hi88</a></li>
+                                <li><a target="_blank" href="https://bengalsfootballpro.com/" title="LEO888">LEO888</a></li>
+                                <li><a target="_blank" href="https://itwast.com/" title="https://itwast.com/">https://itwast.com/</a></li>
+                                <li><a target="_blank" href="https://go88gb.com/" title="Go88">Go88</a></li>
+                                <li><a target="_blank" href="https://sunwin100.net/" title="Sunwin">Sunwin</a></li>
+                                <li><a target="_blank" href="https://kubet.store/" title="Kubet">Kubet</a></li>
+                                <li><a target="_blank" href="https://panvietnam.com/" title="Thabet">Thabet</a></li>
+                                <li><a target="_blank" href="https://hb88.gg/" title="Hb88">Hb88</a></li>
+                                <li><a target="_blank" href="https://junkyardrat.com/" title="Jun88">Jun88</a></li>
+                                <li><a target="_blank" href="https://okvip.training/" title="OKVIP">OKVIP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3 col-sm-12 col-xs-12 __web-inspector-hide-shortcut__ text-center" style="border-top: 1px solid #2b3842; padding-top: 20px;">Copyright © 2024</div>
+                </div>
+            </div>
+        
+            <div class="bg-footer-end">
+                <!-- Optional footer end content can go here -->
+            </div>
+        </footer>
+         <!-- footer section end -->
     </div>
 
   </body>
   <script src="./Js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </html>

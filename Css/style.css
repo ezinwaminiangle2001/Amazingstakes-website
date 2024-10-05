@@ -28,7 +28,11 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 20px;
-  /* padding: 10px !important; */
+  padding: 10px !important;
+}
+
+.navbar-collapse{
+  flex-grow: 0.2 !important;
 }
 
 
@@ -37,7 +41,7 @@ body {
 }
 
 /* Style for the active nav link */
-.navbar-nav>.active>a {
+.navbar-nav > .active > a {
   color: #fff !important;
   background-color: #24A4F4;
   margin: 0;
@@ -336,6 +340,130 @@ body {
   object-fit: contain;
 }
 
+/* footer section */
+.bg-footer {
+  background-color: #000000;
+  padding: 5px 0 30px;
+  margin-top: 80px;
+  padding-bottom: 30px
+}
+
+.bg-footer .foot1 a img {
+  width: 250px;
+}
+
+.bg-footer .footer-single {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.bg-footer .footer-title {
+  display: block;
+  margin: 10px 0 25px 0;
+  border-bottom: 1px dotted #e4e9f0;
+}
+
+.bg-footer .footer-single a {
+  text-decoration: none
+}
+
+.bg-footer .footer-single h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 200;
+  display: inline-block;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: -2px
+}
+
+.bg-footer .footer-single li {
+  padding: 2px;
+}
+
+.bg-footer .footer-single li a {
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 0;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.bg-footer .footer-single li a:hover {
+  color: #007bff;
+}
+
+.bg-footer .footer-single li a i{
+  float: right !important;
+}
+
+.bg-footer .footer-single li a:hover i {
+  color: #007bff
+}
+
+.bg-footer .useful-links li a {
+  text-transform: uppercase
+}
+
+.bg-footer .footer-project a {
+  font-size: 13px
+}
+
+.bg-footer .footer-project .footer-title {
+  margin-top: 0
+}
+
+.bg-footer .footer-single p,.footer-single address {
+  color: #979797;
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 22px
+}
+
+.foot4 {
+  border-top: 1px solid #2b3842;
+  padding-top: 50px;
+  margin-bottom: -15px;
+}
+
+.foot4 h5 {
+  text-align: center;
+  color: #dedede;
+  margin-top: 0;
+  font-family: montserrat,sans-serif;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+.foot4 ul {
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+.foot4 ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 20px 15px
+}
+
+.foot4 ul li a img {
+  opacity: .4
+}
+
+
+
+
+
+
+
+
+
+
 
 /* mobile screen */
 @media(max-width: 992px) {
@@ -380,7 +508,7 @@ body {
 
   .hero-section::before {
     height: auto;
-    min-height: 145%;
+    min-height: 155%;
   }
 
   .jumbotron.headBanner {

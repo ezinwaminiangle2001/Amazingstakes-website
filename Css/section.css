@@ -1,9 +1,15 @@
 /* tip section */
-.tip-m, .py-0{
+.tip-m,
+.py-0 {
     margin-bottom: 2rem;
 }
-.black_bar{
-    margin: 0px 0px 8px 0px;
+
+a {
+    text-decoration: none !important;
+}
+
+.black_bar {
+    margin: 0px 0px 8px 0px !important;
 }
 
 /* Style for the black bar header */
@@ -14,7 +20,7 @@
     font-size: 19px !important;
     text-transform: uppercase;
     font-weight: 700 !important;
-    box-shadow: 1px -5px 20px gray,-1px -2px gray, -3px 2px 4px gray, -1px 0px 4px white;
+    box-shadow: 1px -5px 20px gray, -1px -2px gray, -3px 2px 4px gray, -1px 0px 4px white;
 }
 
 /* Styling for the navigation tabs */
@@ -55,7 +61,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.tabs ul > li > a.active {
+.tabs ul>li>a.active {
     cursor: default;
     color: #eaeef2 !important;
     border: 2px solid !important;
@@ -64,7 +70,7 @@
 
 
 /* Table styling */
-.tab-content{
+.tab-content {
     font-size: 14px;
 }
 
@@ -72,7 +78,7 @@
     border-width: 0 !important;
 }
 
-.tab-content .table-striped > thead > tr >th {
+.tab-content .table-striped>thead>tr>th {
     background-color: #000 !important;
     text-align: center;
     color: #fff !important;
@@ -80,7 +86,8 @@
     border: 1px solid #666666 !important;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>* {
+.table-striped>tbody>tr:nth-of-type(odd)>*, 
+.table-striped1>tbody>tr:nth-of-type(odd)>* {
     --bs-table-bg-type: #f5f9fa;
 }
 
@@ -94,12 +101,21 @@
     color: #420303 !important;
 }
 
-.alert h4{
+.containerCT .alert-danger {
+    color: #a94442 !important;
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.alert h4 {
     font-size: 14px !important;
 }
 
 /* Custom banker-blink effect */
-.banker-blink, .blink_me {
+.banker-blink,
+.blink_me {
     animation: blink-text 1.9s linear infinite;
 }
 
@@ -107,9 +123,11 @@
     0% {
         opacity: 0;
     }
+
     70% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -135,7 +153,7 @@
     border: 1px solid !important;
 }
 
-.btn-telegram{
+.btn-telegram {
     color: white !important;
     background: #069fdb !important;
     display: flex;
@@ -150,13 +168,13 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
-  
+
 .btn-telegram:hover {
     background-color: #007bb5 !important;
     color: white;
 }
 
-/* investment odd */
+/* investment odd  section*/
 .win-btn {
     display: inline-block !important;
     vertical-align: middle;
@@ -196,11 +214,15 @@
     transition-timing-function: ease-out;
 }
 
-.win-btn:hover,.win-btn:focus,.win-btn:active {
+.win-btn:hover,
+.win-btn:focus,
+.win-btn:active {
     color: #fff;
 }
 
-.win-btn:hover:before,.win-btn:focus:before,.win-btn:active:before {
+.win-btn:hover:before,
+.win-btn:focus:before,
+.win-btn:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -moz-transform: scaleX(1);
@@ -208,7 +230,158 @@
     -o-transform: scaleX(1);
 }
 
+/* vip page section */
+.vp-pack .lead {
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+}
 
+.vp-pack h2{
+    color: #000;
+    font-size: 1.5rem !important;
+    font-weight: 700;
+}
+
+.vp-pack .my-2{
+    font-size: 1rem !important;
+}
+
+
+/* popular section */
+
+.store_header {
+    text-align: center;
+    padding: 12px;
+    line-height: 15px !important;
+    color: #0D93D1 !important;
+    font-weight: bold;
+}
+
+.storeBox {
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: 1px solid #000;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 0px;
+    font-family: 'Amaranth';
+    margin-bottom: 15px;
+}
+
+.storeBox:hover {
+    background-color: #069fdb;
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* blog section */
+.blog {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full width for flexibility */
+}
+
+.blog-row {
+    width: 90% !important;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the content */
+}
+
+
+.blog-title-wrap {
+    padding: 20px 20px 0;
+}
+
+.blog-title-wrap p {
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+/* recent win */
+
+.fa-check-circle {
+    color: white;
+}
+.fa-times-circle {
+    color: white;
+}
+.fa-circle {
+    color: rgb(27, 27, 27)919818;
+}
+
+.league-odds {
+    background: white !important;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 1px -1px 15px gray, -1px -1px gray, -3px 2px 4px gray, -1px 0px 4px white;
+}
+
+.tabs1 .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background: #060321;
+    color: white;
+    padding: 4px 15px;
+}
+
+.tabs1 .nav-tabs>li>a.active{
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background: #007bb5;
+    color: #FFFFFF;
+}
+
+.league-title{
+    padding: 2px 13px !important;
+    color: #007bb5;
+    /* background: #060321; */
+    font-weight: bolder !important;
+}
+
+.info ul li a {
+    text-decoration: none;
+    color: #007bb5;
+}
+
+.info ul li h4 {
+    font-family: lato,sans-serif;
+    color: #3f3e3e;
+}
+
+.info {
+    /* float: left; */
+    /* width: 68%; */
+    border-left: 1px solid #595959;
+    border-right: 1px solid #595959;
+    padding: 0 3%;
+}
+
+.info ul {
+    padding: 0;
+}
+
+.info ul li {
+    list-style-type: none;
+}
+
+.info ul li p {
+    color: #737373;
+}
 
 
 
@@ -216,8 +389,20 @@
 
 
 /* Align sections on smaller screens */
+
+@media (max-width: 978px) {
+    .storebox_icon {
+        right: 25px;
+        font-size: 4px;
+        top: 5px;
+        padding: 3px;
+        border: 2px solid white;
+        border-radius: 42px;
+    }
+}
+
 @media (max-width: 790px) {
-    .tip-m{
+    .tip-m {
         margin-top: 10rem !important;
     }
 
@@ -230,6 +415,14 @@
     .tabs ul li {
         flex-grow: 1;
         text-align: center;
+    }
+
+    .blog-row {
+        width: 100% !important;
+    }
+
+    .blog-card{
+        margin-bottom: 20px;
     }
 }
 
@@ -244,13 +437,8 @@
 
 
 @media (max-width: 480px) {
-    .tip-m{
+    .tip-m {
         margin-top: 12rem !important;
     }
-  }
 
-@media (max-width: 992px) {
-    .hideLG {
-        display: block;
-    }
 }
