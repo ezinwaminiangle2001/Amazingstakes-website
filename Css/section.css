@@ -78,7 +78,8 @@ a {
     border-width: 0 !important;
 }
 
-.tab-content .table-striped>thead>tr>th {
+.tab-content .table-striped>thead>tr>th,
+#allMatches .table-striped1>thead>tr>th {
     background-color: #000 !important;
     text-align: center;
     color: #fff !important;
@@ -252,7 +253,6 @@ a {
 .store_header {
     text-align: center;
     padding: 12px;
-    line-height: 15px !important;
     color: #0D93D1 !important;
     font-weight: bold;
 }
@@ -287,7 +287,7 @@ a {
 .blog {
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     /* Full width for flexibility */
 }
 
@@ -363,8 +363,9 @@ a {
 }
 
 .info ul li h4 {
-    font-family: lato, sans-serif;
     color: #3f3e3e;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .info {
@@ -392,7 +393,7 @@ a {
 /* Container and Section */
 .sponsors-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #ebebeb;
 }
 
 .sponsors-section h5 {
@@ -445,7 +446,231 @@ a {
 }
 
 
+/* tip store page styling */
+.page-hero{
+    margin-top: 5% !important;
+    margin-bottom: 3% !important;
+}
 
+.page-hero {
+    position: relative;
+    background: url('../image/1.webp') no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+.page-hero::before{
+    content: " ";
+    position: absolute;
+    border-radius: 0px;
+    background-color: rgba(1, 1, 1, .8);
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    z-index: 1;
+}
+  
+.page-hero .well{
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-link {
+    color: #b28e0b;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #f1c40f;
+    text-decoration: underline !important;
+}
+
+.current-page {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+
+.accordion-button {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 15px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.90rem;
+    font-weight: bold; 
+}
+
+.accordion-button.collapsed {
+    text-transform: uppercase;
+    font-size: 0.90rem; 
+    font-weight: bold; 
+}
+
+.accordion-button::after {
+    font-size: 1.25rem;
+}
+
+
+/* free predicition */
+.flatpickr-input[readonly] {
+    cursor: pointer;
+  }
+
+.cw-fix {
+    margin: auto;
+    width: 100%;
+}
+
+.league_name {
+    cursor: pointer;
+}
+
+.team-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.league_name{
+    color: black;
+    font-size: 1.2rem !important;
+    padding: 10px;
+}
+
+.league-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;  
+    font-weight: 500; 
+    color: #000; 
+    cursor: pointer;
+}
+
+.league-name i {
+    font-size: 16px;
+    margin-left: 10px;
+    border: 1px solid #737373;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.collapse.show .league-name i {
+    transform: rotate(45deg);
+}
+
+.cw-fix .badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.tip-card {
+    -webkit-overflow-scrolling: touch;
+    background-color: #e3effc;
+    padding-top: 15px;
+    /* border: 1px solid lightgray; */
+}
+
+.tip-card thead {
+    display: none;
+}
+
+.tip-card tr {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.tip-card td {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.tip-team .col-xs-12{
+    width: 100%;
+}
+
+.tip-footer {
+    padding: 0 10px;
+    background: rgb(241, 241, 241) !important;
+    cursor: pointer;
+}
+
+.tip-footer .col-xs-5 {
+    width: 41.66666667%;
+}
+
+.tip-footer .time, .tip-footer .tip {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tip-footer .tip {
+    display: flex;
+    justify-content: end;
+}
+
+.tip-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0D93D1;
+    /* border: 1px solid #0D93D1; */
+    border-radius: 0 4px 4px 0;
+    color: whitesmoke;
+}
+
+.tip-inner span {
+    padding: 4px 7px;
+    background: white;
+    color: #000;
+    font-weight: 500;
+}
+
+.tip-inner div {
+    padding: 4px 10px;
+}
+
+.btn-lg {
+    padding: 15px 20px;
+    font-size: 14px;
+}
 
 
 
@@ -468,6 +693,10 @@ a {
         padding: 3px;
         border: 2px solid white;
         border-radius: 42px;
+    }
+
+    .page-hero{
+        margin-top: 8% !important;
     }
 }
 
@@ -507,6 +736,27 @@ a {
     .win .p-12 {
         padding: 0px;
     }
+
+    .page-hero{
+        margin-top: 10% !important;
+    }
+
+    /* tip store */
+    .accord-w, .sm-w{
+        width: 100% !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+        font-size: 14px;
+    }
+    
+    .accordion-button.collapsed {
+        font-size: 14px;
+    }
+
+
+
+    
 }
 
 @media (max-width: 600px) {
@@ -559,11 +809,70 @@ a {
         padding: 0px;
     }
 
+    .page-hero{
+        margin-top: 18% !important;
+    }
+
+    /* tip store */
+    .accord-w, .sm-w{
+        width: 100% !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+        font-size: 12px;
+        text-transform: none;
+    }
+    
+    .accordion-button.collapsed {
+        font-size: 12px;
+        text-transform: none;
+    }
+
 }
 
 @media (max-width: 768px) {
     .sponsors-list {
         flex-direction: column;
+    }
+
+    #matchesTable {
+        width: 100%;
+        /* display: block; */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #matchesTable thead {
+        display: none;
+    }
+    #matchesTable tr {
+        display: block;
+        margin-bottom: 15px; 
+        box-shadow: 1px 1px 5px gray, -1px -1px gray, -3px 2px 4px gray, -1px 0px 50px white;
+    }
+    #matchesTable td {
+        display: flex;
+        justify-content: center; 
+        padding: 10px;
+        border: 1px solid #ddd;
+        position: relative;
+    }
+    #matchesTable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px; 
+        font-weight: bold;
+    }
+
+    .league_name{
+        font-size: 1rem !important;
+    }
+
+    .league-name i {
+        font-size: 15px;
+        margin-left: 10px;
+        border: 1px solid #737373;
+        padding: 3px;
     }
 
     .sponsors-list li {
@@ -575,4 +884,6 @@ a {
     .sponsors-list li {
         margin: 0 10px;
     }
+
 }
+

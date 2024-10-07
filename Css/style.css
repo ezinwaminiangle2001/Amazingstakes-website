@@ -161,6 +161,7 @@ body {
 
 /* Hero section */
 .hero-section {
+  position: relative;
   background: url('../image/1.webp') no-repeat center / cover;
   height: 100vh;
   display: flex;
@@ -177,6 +178,10 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8); 
   z-index: 1;
+}
+
+.page-top{
+  margin-top: 10%;
 }
 
 .jumbotron.headBanner {
@@ -500,14 +505,12 @@ body {
 } */
 
 @media (max-width: 767px) {
+  .page-top{
+    margin-top: 20%;
+  }
   .hero-section {
       height: auto !important;
       /* padding: 2rem 0 !important; */
-  }
-
-  .hero-section::before {
-    height: auto;
-    min-height: 75%;
   }
 
   .jumbotron.headBanner {
@@ -541,16 +544,11 @@ body {
 }
 
 @media (max-width: 600px){
-  .hero-section::before {
-    height: auto;
-    min-height: 110%;
-  }
 }
 
 @media (max-width: 480px) {
-  .hero-section::before {
-    height: auto;
-    min-height: 100%;
+  .page-top{
+    margin-top: 25%;
   }
 
   .social-links-left {

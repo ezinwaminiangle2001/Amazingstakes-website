@@ -26,6 +26,7 @@ body{
 }
 
 .main{
+    position: relative;
     width: 500px;
     height: 650px;
     margin-top: 8% !important;
@@ -38,6 +39,17 @@ body{
     -o-border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
     z-index: 100 !important;
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 3, 3, 0.8); /* Adjust opacity here */
+    border-radius: 10px; /* Match the border radius of the .mains */
+    z-index: 1; /* Make sure this overlay is on top of the background image */
 }
 
 .mains{
@@ -73,7 +85,7 @@ body{
     display: none !important; 
 }
 
-.login2{
+.login2,.signup{
     z-index: 100 !important;
 }
 
@@ -206,17 +218,17 @@ label, .login2 label{
     -o-transform: scale(.8) !important;
 }
 
-.login .them, .themo, .login2 .them, .themo{
+.signup .them, .themo, .login2 .them, .themo{
     justify-content: center !important;
     display: flex !important;
     align-items: center !important;
 }
 
-.login2 .them, .themo{
+.login2 .them,.signup .them, .themo{
     color: #fff !important;
 }
 
-.login .them .thembo, .login2 .them .thembo  {
+.signup .them .thembo, .login2 .them .thembo  {
     color: #007bff !important;
     text-decoration: none !important;
 }
