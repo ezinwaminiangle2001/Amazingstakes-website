@@ -505,6 +505,10 @@ body {
 } */
 
 @media (max-width: 767px) {
+  .fixed-top {
+    position: absolute !important;
+  }
+  
   .page-top{
     margin-top: 20%;
   }

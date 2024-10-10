@@ -21,12 +21,24 @@
       rel="stylesheet"
       media="all"
     />
+
+     <!-- Include Flatpickr CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+     <!-- Include Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+ 
      <!-- Google Font -->
      <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+
   </head>
+
   <body>
     <div class="wrapper">
         <header>
@@ -45,10 +57,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/index.html">HOME <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="/free-predicition.html">FREE PREDICTIONS</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="/predicition-store.html">TIP STORES</a>
                             </li>
                             <li class="nav-item">
@@ -143,7 +155,7 @@
                                 <br> <br>
                                 <h4 class="headerTitle">
                                     <a href="/" class="breadcrumb-link">Home</a> / 
-                                    <span class="current-page">Tip Stores</span>
+                                    <span class="current-page">Package</span>
                                 </h4>
                                 <div class="container">
                                     <div class="row">
@@ -160,78 +172,117 @@
             </div>
         </section>
         <!-- pages hero section end -->
-        
-        <!-- popular section start -->
-        <section class="pt-lg-5 py-0 pt-md-3">
-            <div class="container sm-w" style="width: 75%;">
-                <div class="pb-4">
-                    <div class="row">
-                        <div class="col-lg-6 col-12 col-md-12">
-                            <div id="tips" class="mt-4">
-                                <h2>Tips Store</h2>
-                                <p style="font-size: 13px; text-align: justify;" class="pe-lg-4">Our soccer betting glossary includes complete explanations of less common betting words, detailing their essential characteristics, advantages and downsides, and letting you know in what capacity that specific betting market is often utilized. While online bookmakers frequently reference phrases included in our betting dictionary, they rarely give explanations for the terms, forcing bettors to explore the web for specific meanings. <br>Instead of wasting time looking for the definitions of betting terms, you can just check our comprehensive soccer betting glossary and learn everything there is to know about the new market or style of betting you have met. The dictionary will be updated on a regular basis to include all of the most recent betting terms, ensuring that you are constantly up to date with the newest advancements in the online gambling business.
-                                    </p>
-                                <ul style="font-size: 13px; text-align: justify;" class="pe-lg-4">
-                                    <li>You must know what the predictions options are and how they work.</li>
-                                    <li>Whenever possible, play it safe, and restrict lots of selection.</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-6 col-12 col-md-12 p-12">
-                            <div class="col-12 pb-3">
-                                <h3 class="store_header"><span class="text">EXPERTS PREDICITION CATEGORIES</span></h3>
-                            </div>
-                            <div class="row p-12">
-                                <div class="col-lg-12 col-md-12 col-sm-12 mb-lg-0 mb-2">
-                                    <a href="#">
-                                        <div class="storeBox">
-                                            WEEKENDS 50 ODD
-                                        </div>
-                                    </a>
-                                </div>
-                    
-                                <div class="col-lg-12 col-md-12 col-sm-12 mb-lg-0 mb-2">
-                                    <a href="#">
-                                        <div class="storeBox">
-                                            EXPERT ACCA
-                                        </div>
-                                    </a>
-                                </div>
-                    
-                                <div class="col-lg-12 col-md-12 col-sm-12 mb-lg-0 mb-2">
-                                    <a href="#">
-                                        <div class="storeBox">
-                                            MILLIONAIRE ACCA
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <!-- popular section end -->
-
-        <!-- package section start -->
         <section class="py-0">
-            <div class="container my-3 vp-pack">
+            <div class="container my-5 vp-pack">
                 <center>
                     <h3 class="mb-2 black_bar">PACKAGES PLAN</h3>
                 </center>
-            
-                <div class="row align-items-center align-items-xl-stretch flex-xl-row justify-content-center">
+                <div class="mb-3 text-center col-12">
+                    <div class="mt-5 form-group">
+                        <label class="text-center"><strong>Please kindly choose your country:</strong></label>
+                        <select name="currency" id="currency-select" class="form-select text-dark" onchange="updateCurrency()" required="">
+                            <option value="" selected="">Select Country</option>
+                            <option value="AFN" data-symbol="؋" data-rate="0.012">Afghanistan (AFN, ؋)</option>
+                            <option value="ALL" data-symbol="L" data-rate="0.009">Albania (ALL, L)</option>
+                            <option value="DZD" data-symbol="د.ج" data-rate="0.0073">Algeria (DZD, د.ج)</option>
+                            <option value="USD" data-symbol="$" data-rate="1">American Samoa (USD, $)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Andorra (EUR, €)</option>
+                            <option value="AOA" data-symbol="Kz" data-rate="0.0020">Angola (AOA, Kz)</option>
+                            <option value="XCD" data-symbol="$" data-rate="0.37">Anguilla (XCD, $)</option>
+                            <option value="No official currency">Antarctica (No official currency)</option>
+                            <option value="XCD" data-symbol="$" data-rate="0.37">Antigua and Barbuda (XCD, $)</option>
+                            <option value="ARS" data-symbol="$" data-rate="0.0048">Argentina (ARS, $)</option>
+                            <option value="AMD" data-symbol="֏" data-rate="0.0023">Armenia (AMD, ֏)</option>
+                            <option value="AWG" data-symbol="ƒ" data-rate="0.56">Aruba (AWG, ƒ)</option>
+                            <option value="AUD" data-symbol="$" data-rate="0.70">Australia (AUD, $)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Austria (EUR, €)</option>
+                            <option value="AZN" data-symbol="₼" data-rate="0.59">Azerbaijan (AZN, ₼)</option>
+                            <option value="BSD" data-symbol="$" data-rate="1">Bahamas (BSD, $)</option>
+                            <option value="BHD" data-symbol=".د.ب" data-rate="2.65">Bahrain (BHD, .د.ب)</option>
+                            <option value="BDT" data-symbol="৳" data-rate="0.012">Bangladesh (BDT, ৳)</option>
+                            <option value="BBD" data-symbol="$" data-rate="0.50">Barbados (BBD, $)</option>
+                            <option value="BYN" data-symbol="Br" data-rate="0.37">Belarus (BYN, Br)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Belgium (EUR, €)</option>
+                            <option value="BZD" data-symbol="$" data-rate="0.50">Belize (BZD, $)</option>
+                            <option value="XOF" data-symbol="CFA" data-rate="0.0015">Benin (XOF, CFA)</option>
+                            <option value="BMD" data-symbol="$" data-rate="1">Bermuda (BMD, $)</option>
+                            <option value="BTN" data-symbol="Nu." data-rate="0.012">Bhutan (BTN, Nu.)</option>
+                            <option value="BOB" data-symbol="Bs." data-rate="0.14">Bolivia (BOB, Bs.)</option>
+                            <option value="BAM" data-symbol="KM" data-rate="0.57">Bosnia and Herzegovina (BAM, KM)</option>
+                            <option value="BWP" data-symbol="P" data-rate="0.086">Botswana (BWP, P)</option>
+                            <option value="BRL" data-symbol="R$" data-rate="0.19">Brazil (BRL, R$)</option>
+                            <option value="USD" data-symbol="£" data-rate="1">British Indian Ocean Territory (USD, £)</option>
+                            <option value="BND" data-symbol="$" data-rate="0.70">Brunei Darussalam (BND, $)</option>
+                            <option value="BGN" data-symbol="лв" data-rate="0.54">Bulgaria (BGN, лв)</option>
+                            <option value="XOF" data-symbol="CFA" data-rate="0.0015">Burkina Faso (XOF, CFA)</option>
+                            <option value="BIF" data-symbol="FBu" data-rate="0.00054">Burundi (BIF, FBu)</option>
+                            <option value="KHR" data-symbol="៛" data-rate="0.00025">Cambodia (KHR, ៛)</option>
+                            <option value="XAF" data-symbol="Fr" data-rate="0.0018">Cameroon (XAF, Fr)</option>
+                            <option value="CAD" data-symbol="$" data-rate="0.80">Canada (CAD, $)</option>
+                            <option value="CVE" data-symbol="$" data-rate="0.0090">Cape Verde (CVE, $)</option>
+                            <option value="XAF" data-symbol="CFA" data-rate="0.0018">Central African Republic (XAF, CFA)</option>
+                            <option value="XAF" data-symbol="CFA" data-rate="0.0018">Chad (XAF, CFA)</option>
+                            <option value="CLP" data-symbol="$" data-rate="0.0014">Chile (CLP, $)</option>
+                            <option value="CNY" data-symbol="¥" data-rate="0.15">China (CNY, ¥)</option>
+                            <option value="AUD" data-symbol="$" data-rate="0.70">Christmas Island (AUD, $)</option>
+                            <option value="AUD" data-symbol="$" data-rate="0.70">Cocos (Keeling) Islands (AUD, $)</option>
+                            <option value="COP" data-symbol="$" data-rate="0.00023">Colombia (COP, $)</option>
+                            <option value="KMF" data-symbol="Fr" data-rate="0.0023">Comoros (KMF, Fr)</option>
+                            <option value="XAF" data-symbol="Fr" data-rate="0.0018">Congo (XAF, Fr)</option>
+                            <option value="CDF" data-symbol="Fr" data-rate="0.00049">Congo, the Democratic Republic of the (CDF, Fr)</option>
+                            <option value="NZD" data-symbol="$" data-rate="0.65">Cook Islands (NZD, $)</option>
+                            <option value="CRC" data-symbol="₡" data-rate="0.0018">Costa Rica (CRC, ₡)</option>
+                            <option value="XOF" data-symbol="Fr" data-rate="0.0015">Cote d'Ivoire (XOF, Fr)</option>
+                            <option value="HRK" data-symbol="kn" data-rate="0.15">Croatia (HRK, kn)</option>
+                            <option value="CUP" data-symbol="₱" data-rate="0.042">Cuba (CUP, ₱)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Cyprus (EUR, €)</option>
+                            <option value="CZK" data-symbol="Kč" data-rate="0.045">Czech Republic (CZK, Kč)</option>
+                            <option value="DKK" data-symbol="kr" data-rate="0.15">Denmark (DKK, kr)</option>
+                            <option value="DJF" data-symbol="Fdj" data-rate="0.0056">Djibouti (DJF, Fdj)</option>
+                            <option value="XCD" data-symbol="$" data-rate="0.37">Dominica (XCD, $)</option>
+                            <option value="DOP" data-symbol="$" data-rate="0.018">Dominican Republic (DOP, $)</option>
+                            <option value="USD" data-symbol="$" data-rate="1">East Timor (USD, $)</option>
+                            <option value="USD" data-symbol="$" data-rate="1">Ecuador (USD, $)</option>
+                            <option value="EGP" data-symbol="£" data-rate="0.32">Egypt (EGP, £)</option>
+                            <option value="USD" data-symbol="$" data-rate="1">El Salvador (USD, $)</option>
+                            <option value="XAF" data-symbol="Fr" data-rate="0.0018">Equatorial Guinea (XAF, Fr)</option>
+                            <option value="ERN" data-symbol="Nfk" data-rate="0.067">Eritrea (ERN, Nfk)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Estonia (EUR, €)</option>
+                            <option value="ETB" data-symbol="Br" data-rate="0.018">Ethiopia (ETB, Br)</option>
+                            <option value="FJD" data-symbol="$" data-rate="0.45">Fiji (FJD, $)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Finland (EUR, €)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">France (EUR, €)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Germany (EUR, €)</option>
+                            <option value="GHS" data-symbol="GH₵" data-rate="0.086">Ghana (GHS, GH₵)</option>
+                            <option value="GIP" data-symbol="£" data-rate="0.29">Gibraltar (GIP, £)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Greece (EUR, €)</option>
+                            <option value="GBP" data-symbol="£" data-rate="0.75">United Kingdom (GBP, £)</option>
+                            <option value="USD" data-symbol="$" data-rate="1">United States (USD, $)</option>
+                            <option value="KRW" data-symbol="₩" data-rate="0.00076">Korea (KRW, ₩)</option>
+                            <option value="JPY" data-symbol="¥" data-rate="0.007">Japan (JPY, ¥)</option>
+                            <option value="EUR" data-symbol="€" data-rate="0.85">Italy (EUR, €)</option>
+                            <option value="INR" data-symbol="₹" data-rate="0.012">India (INR, ₹)</option>
+                            <option value="VND" data-symbol="₫" data-rate="0.000042">Vietnam (VND, ₫)</option>
+                            <option value="TRY" data-symbol="₺" data-rate="0.037">Turkey (TRY, ₺)</option>
+                            <option value="RUB" data-symbol="₽" data-rate="0.012">Russia (RUB, ₽)</option>
+                            <option value="AUD" data-symbol="$" data-rate="0.70">Australia (AUD, $)</option>
+                            <option value="NGN" data-symbol="₦" data-rate="0.030">Nigeria (NGN, ₦)</option>
+                            <option value="ZAR" data-symbol="R" data-rate="0.054">South Africa (ZAR, R)</option>
+                        </select>                        
+                    </div>
+                </div>
+
+                <div class="row align-items-center align-items-xl-stretch flex-xl-row justify-content-center" style="display: none;" id="pricing-plans">
                     <!-- free Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 free">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
                             <h2>Free Plan</h2>
-                            <!-- <div class="my-2">
-                                <span class="fs-1 text-body-secondary fw-bold">$</span>
-                                <span class="fs-1 text-dark fw-bolder">49</span>
+                            <div class="my-2">
+                                <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
+                                <span id="price-amount" class=" price-amount fs-1 text-dark fw-bolder">0.00</span>
                                 <span class="fs-3 text-body-secondary">/mo</span>
-                            </div> -->
+                            </div>
                             <p class="lead">
                                 Access to 1.5 Odds Banker for free
                             </p>
@@ -286,7 +337,7 @@
                                 <span>Mega / Midweek Jackpot</span>
                             </div>
                             <div class="mt-auto">
-                                <button class="btn btn-primary text-white mt-4 w-100">
+                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
                                     Subscribe
                                 </button>
                             </div>
@@ -294,14 +345,14 @@
                     </div>
 
                     <!-- Silver Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 special">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
                             <h2>Special Plan</h2>
-                            <!-- <div class="my-2">
-                                <span class="fs-1 text-body-secondary fw-bold">$</span>
-                                <span class="fs-1 text-dark fw-bolder">49</span>
+                            <div class="my-2">
+                                <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
+                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">20.3</span>
                                 <span class="fs-3 text-body-secondary">/mo</span>
-                            </div> -->
+                            </div>
                             <p class="lead">
                                 Access to 3 Odds Banker for 1 Week
                             </p>
@@ -340,7 +391,7 @@
                                 <span>10 ODDS</span>
                             </div>
                             <div class="mt-auto">
-                                <button class="btn btn-primary text-white mt-4 w-100">
+                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
                                     Subscribe
                                 </button>
                             </div>
@@ -348,14 +399,14 @@
                     </div>
             
                     <!-- Gold Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 vip">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
                             <h2>Vip Plan</h2>
-                            <!-- <div class="my-2">
-                                <span class="fs-1 text-body-secondary fw-bold">$</span>
-                                <span class="fs-1 text-dark fw-bolder">79</span>
+                            <div class="my-2">
+                                <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
+                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">56.3</span>
                                 <span class="fs-3 text-body-secondary">/mo</span>
-                            </div> -->
+                            </div>
                             <p class="lead">
                                 Access to 5 - 10 Odds Daily
                             </p>
@@ -404,7 +455,7 @@
                             </div>
                             
                             <div class="mt-auto">
-                                <button class="btn btn-primary text-white mt-4 w-100">
+                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
                                     Subscribe
                                 </button>
                             </div>
@@ -412,14 +463,14 @@
                     </div>
             
                     <!-- Diamond Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5">
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 investment">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
                             <h2>Investment Plan</h2>
-                            <!-- <div class="my-2">
-                                <span class="fs-1 text-body-secondary fw-bold">$</span>
-                                <span class="fs-1 text-dark fw-bolder">129</span>
+                            <div class="my-2">
+                                <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
+                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">80</span>
                                 <span class="fs-3 text-body-secondary">/mo</span>
-                            </div> -->
+                            </div>
                             <p class="lead">
                                 Sure 1.60 - 2.50 Odds Daily
                             </p>
@@ -443,7 +494,7 @@
                             </div>
                             
                             <div class="mt-auto">
-                                <button class="btn btn-primary text-white mt-4 w-100">
+                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
                                     Subscribe
                                 </button>
                             </div>
@@ -453,126 +504,8 @@
             </div>
             
             
-        </section>
-        <!-- package section end -->
-
-        <!-- Info Section with Accordion Start -->
-        <section class="py-0 pt-4">
-            <div class="container accord-w" style="width: 75%;">
-                <div class="accordion" id="bettingAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Understanding Top Bets: A Comprehensive Guide to Football Betting
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                In the exhilarating world of football betting, mastering the art of choosing the right bets is crucial for success. Let's delve into the different types of top bets, shedding light on the most played characters in this thrilling game of chance.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Home Advantage: "1" - Victory for the Home Team
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                When placing your bets, the "1" option signifies a prediction for the home team's victory. Embracing the home advantage, this bet comes alive when the home team emerges triumphant on the field.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Away Triumph: "2" - Victory for the Away Team
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                Conversely, option "2" anticipates success for the away team. Betting on the away team's victory adds an extra layer of excitement as you cheer for them to conquer their opponents on unfamiliar turf.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Balanced Outcome: "X" - Draw
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                Predicting a closely contested match with no clear winner? Choose "X" for a draw, adding an element of suspense to your football betting experience.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                "1X" - Victory for the Home Team or a Draw (Double Chance)
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                For risk-averse bettors, "1X" offers a safety net. This option covers both a home team victory and a draw, increasing your chances of a winning bet.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                "X2" - Victory for the Away Team or a Draw (Double Chance)
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                Similar to "1X," "X2" safeguards your bet by encompassing an away team victory or a draw. Enjoy the flexibility and broaden your winning possibilities with this strategic choice.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSeven">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                Goal Galore: "BTTS:YES" - Both Teams to Score
-                            </button>
-                        </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                Injecting excitement into the game, "BTTS:YES" predicts that both teams will find the back of the net. Brace yourself for a high-scoring and thrilling match.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingEight">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                Over the Goal Line: "Over 2.5 Goals"
-                            </button>
-                        </h2>
-                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                For those who relish goal-filled encounters, "Over 2.5" is the go-to choice. This bet wins when the total goals scored in the match surpass the 2.5 mark.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingNine">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                "Under 2.5" - Less than 2.5 Goals
-                            </button>
-                        </h2>
-                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#bettingAccordion">
-                            <div class="accordion-body">
-                                On the flip side, "UN2.5" caters to fans of defensive showdowns. This bet wins when the total goals in the match fall below the 2.5 threshold.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Info Section with Accordion End -->
-
+         </section>
+        
         <!-- sponsors section start -->
         <section id="sponsors-section" class="sponsors-section">
             <div class="container">
@@ -686,11 +619,70 @@
          <!-- footer section end -->
     </div>
 
-  </body>
-  <script src="./Js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function updateCurrency() {
+            const currencySelect = document.getElementById("currency-select");
+            const selectedOption = currencySelect.options[currencySelect.selectedIndex];
+            const selectedCurrencySymbol = selectedOption.getAttribute("data-symbol");
+            const exchangeRate = parseFloat(selectedOption.getAttribute("data-rate"));
 
+            // Assign base prices for each plan
+            const prices = {
+                free: 0, 
+                special: 20.3,
+                vip: 56.3,
+                investment: 80
+            };
+
+            // Convert prices for each plan
+            for (const plan in prices) {
+                const basePriceUSD = prices[plan];
+                const convertedAmount = (basePriceUSD * exchangeRate).toFixed(2);
+                
+                // Update the currency symbol and amount for each plan
+                const symbolElement = document.querySelector(`.${plan} .currency-symbol`);
+                const amountElement = document.querySelector(`.${plan} .price-amount`);
+                
+                if (symbolElement && amountElement) {
+                    symbolElement.textContent = selectedCurrencySymbol;
+                    amountElement.textContent = convertedAmount;
+                }
+            }
+
+            // Show the pricing plans if a valid option is selected
+            const pricingPlans = document.getElementById("pricing-plans");
+            if (selectedOption.value) {
+                pricingPlans.style.display = "flex";
+            } else {
+                pricingPlans.style.display = "none"; 
+            }
+        }
+    </script>
+
+    <script>
+        // Function to check if the user is logged in
+        function isLoggedIn() {
+            return localStorage.getItem("loggedIn") === "true";
+        }
+
+        // Function to handle subscribe button click
+        function handleSubscribe() {
+            if (isLoggedIn()) {
+                window.location.href = "/payment.html"; 
+            } else {
+                window.location.href = "/login.html"; 
+            }
+        }
+    </script>
+
+  </body>
+    <script src="./Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </html>
