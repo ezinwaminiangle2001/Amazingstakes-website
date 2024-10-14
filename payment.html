@@ -54,10 +54,10 @@
         
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav m-auto">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="/index.html">HOME <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="/free-predicition.html">FREE PREDICTIONS</a>
                             </li>
                             <li class="nav-item">
@@ -137,8 +137,7 @@
         
                         <!-- Right aligned buttons -->
                         <div class="d-flex">
-                            <a href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
-                            <a href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="account-btn" href="/user/dashboard.html" class="btn navbar-btn btn-danger">Account</a>
                         </div>
                     </div>
                 </div>
@@ -173,115 +172,92 @@
         </section>
         <!-- pages hero section end -->
 
-        <section>
-            <div class="container lp spe-bot-red-3">
-                <div class="inn-tittle text-center">
-                    <h2>SELECT A PAYMENT OPTION</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-12 text-center">
-                        <div class="inn-tittle">
-                            <h2>Pay With</h2>
-                        </div>
-                        <select class="form-select" id="paymentOption" aria-label="Select Payment Option" onchange="handlePayment()">
-                            <option selected disabled>Select a payment method</option>
-                            <option value="card">Card (Visa/MasterCard)</option>
-                            <option value="paypal">PayPal</option>
-                        </select>
-                        <br>
-                        <!-- <a href="#" id="makePayment" class="btn btn-primary mt-2" style="display: none;" onclick="redirectToPayment()">Make Payment</a> -->
-                    </div>
-                </div>
+        <section class="py-0">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <!-- <div class="col-sm-12 col-md-6">
+                        <h3 class="mb-3">
+                            Payment methods available in: <br>
+                            <strong style="color: green;">
+                                <small>
+                                    <i class="fa fa-chevron-right"></i>
+                                    <i class="fa fa-chevron-right"></i>
+                                </small>&nbsp;Algeria
+                            </strong>
+                        </h3>
+                    </div> -->
+                    <!-- <div class="col-sm-12 col-md-6"> -->
+                        <h6>Not your country?
+                            <a href="/user/profile.html" class="border rounded btn text-danger font-weight-bolder" aria-label="Change country">
+                                Change Here&nbsp;<i class="fa fa-arrow-right"></i>
+                            </a>
+                        </h6>
+                    <!-- </div> -->
+                </div>                
 
-                <div id="planSection" class="lp spe-bot-red-3 justify-content-center" style="display: none;">
-                    <div class="inn-tittle text-center">
-                        <h2>Select A Plan</h2>
+                <div class="selectpay mx-auto">
+                    <div class="title">
+                        <h4>Select a <span style="color: #3289cf">Payment</span> method</h2>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <button class="btn btn-outline-primary faq-text" data-toggle="collapse" data-target="#vipPlan" aria-expanded="false" aria-controls="vipPlan">
-                                <strong>VIP Plan</strong>
-                            </button>
-                            <div class="collapse panelprice" id="vipPlan">
-                                <div class="bet-btn-w-vip">
-                                    <div class="p-jc-in-1">
-                                        <h2>VIP Plan</h2>
-                                    </div>
-                                    <div>
-                                        <a href="inter-pay.php?plan=19" class="btn btn-dark">1 Week VIP $10.00</a>
-                                        <a href="inter-pay.php?plan=20" class="btn btn-dark">1 Month VIP $20.00</a>
-                                        <a href="inter-pay.php?plan=21" class="btn btn-dark">3 Months VIP $55.00</a>
-                                        <a href="inter-pay.php?plan=22" class="btn btn-dark">6 Months VIP $80.00</a>
-                                        <a href="inter-pay.php?plan=23" class="btn btn-dark">1 Year VIP $100.00</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                    <form action="#">
+                        <input type="radio" name="payment" id="visa">
+                        <input type="radio" name="payment" id="mastercard">
+                        <input type="radio" name="payment" id="paypal">
+                        <input type="radio" name="payment" id="AMEX">
             
-                        <div class="col-md-6 col-12">
-                            <button class="btn btn-outline-primary faq-text" data-toggle="collapse" data-target="#specialPlan" aria-expanded="false" aria-controls="specialPlan">
-                                <strong>Special Plan</strong>
-                            </button>
-                            <div class="collapse panelprice" id="specialPlan">
-                                <div class="bet-btn-w-vip">
-                                    <div class="p-jc-in-1">
-                                        <h2>Special Plan</h2>
-                                    </div>
-                                    <div>
-                                        <a href="inter-pay.php?plan=24" class="btn btn-dark">1 Week Special $15.00</a>
-                                        <a href="inter-pay.php?plan=25" class="btn btn-dark">1 Month Special $30.00</a>
-                                        <a href="inter-pay.php?plan=26" class="btn btn-dark">3 Months Special $85.00</a>
-                                        <a href="inter-pay.php?plan=27" class="btn btn-dark">6 Months Special $110.00</a>
-                                        <a href="inter-pay.php?plan=28" class="btn btn-dark">1 Year Special $200.00</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
             
-                        <div class="col-md-6 col-12">
-                            <button class="btn btn-outline-primary faq-text" data-toggle="collapse" data-target="#expertsPlan" aria-expanded="false" aria-controls="expertsPlan">
-                                <strong>Experts Plan</strong>
-                            </button>
-                            <div class="collapse panelprice" id="expertsPlan">
-                                <div class="bet-btn-w-vip">
-                                    <div class="p-jc-in-1">
-                                        <h2>Experts Plan</h2>
+                        <div class="category">
+                            <label for="visa" class="visaMethod">
+                                <a href="/pay.html">
+                                <div class="imgName">
+                                    <div class="imgContainer visa">
+                                        <img src="https://i.ibb.co/vjQCN4y/Visa-Card.png" alt="">
                                     </div>
-                                    <div>
-                                        <a href="inter-pay.php?plan=29" class="btn btn-dark">1 Week Experts $18.00</a>
-                                        <a href="inter-pay.php?plan=30" class="btn btn-dark">1 Month Experts $35.00</a>
-                                        <a href="inter-pay.php?plan=31" class="btn btn-dark">3 Months Experts $90.00</a>
-                                        <a href="inter-pay.php?plan=32" class="btn btn-dark">6 Months Experts $125.00</a>
-                                        <a href="inter-pay.php?plan=33" class="btn btn-dark">1 Year Experts $230.00</a>
-                                    </div>
+                                    <span class="name">VISA</span>
                                 </div>
-                            </div>
-                        </div>
+                                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span></a>
+                            </label>
             
-                        <div class="col-md-6 col-12">
-                            <button class="btn btn-outline-primary faq-text" data-toggle="collapse" data-target="#investmentsPlan" aria-expanded="false" aria-controls="investmentsPlan">
-                                <strong>Investments Plan</strong>
-                            </button>
-                            <div class="collapse panelprice" id="investmentsPlan">
-                                <div class="bet-btn-w-vip">
-                                    <div class="p-jc-in-1">
-                                        <h2>Investments Plan</h2>
+                            <label for="mastercard" class="mastercardMethod">
+                                <a href="/pay.html">
+                                <div class="imgName">
+                                    <div class="imgContainer mastercard">
+                                        <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="">
                                     </div>
-                                    <div>
-                                        <a href="inter-pay.php?plan=34" class="btn btn-dark">1 Week Investments $32.00</a>
-                                        <a href="inter-pay.php?plan=35" class="btn btn-dark">2 Weeks Investments $56.00</a>
-                                        <a href="inter-pay.php?plan=36" class="btn btn-dark">1 Month Investments $88.00</a>
-                                    </div>
+                                    <span class="name">Mastercard</span>
                                 </div>
-                            </div>
+                                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span></a>
+                            </label>
+            
+                            <label for="paypal" class="paypalMethod">
+                                <a href="/pay.html">
+                                <div class="imgName">
+                                    <div class="imgContainer paypal" id="paypal-button-container">
+                                        <img src="https://i.ibb.co/KVF3mr1/paypal.png" alt="">
+                                    </div>
+                                    <span class="name">Paypal</span>
+                                </div>
+                                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+                            </a>
+                            </label>
+            
+                            <label for="AMEX" class="amexMethod">
+                                <a href="/pay.html">
+                                <div class="imgName">
+                                    <div class="imgContainer AMEX">
+                                        <img src="/image/amazing-flutter.jpg" alt="">
+                                    </div>
+                                    <span class="name">Flutterwave</span>
+                                </div>
+                                <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span></a>
+                            </label>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        
         </section>
         
-
         <!-- sponsors section start -->
         <section id="sponsors-section" class="sponsors-section">
             <div class="container">
@@ -394,36 +370,7 @@
         </footer>
          <!-- footer section end -->
     </div>
-
-
-    <script>
-        function handlePayment() {
-            const paymentOption = document.getElementById('paymentOption').value;
-            const planSection = document.getElementById('planSection');
-            const makePaymentButton = document.getElementById('makePayment');
     
-            if (paymentOption) {
-                // Show the plan section
-                planSection.style.display = 'block';
-                // Show the make payment button
-                makePaymentButton.style.display = 'inline-block';
-            } else {
-                // Hide the plan section if no option is selected
-                planSection.style.display = 'none';
-                makePaymentButton.style.display = 'none';
-            }
-        }
-    
-        function redirectToPayment() {
-            const paymentOption = document.getElementById('paymentOption').value;
-            if (paymentOption === 'card') {
-                window.location.href = 'card-payment'; // Replace with the actual card payment link
-            } else if (paymentOption === 'paypal') {
-                window.location.href = 'paypal'; // Replace with the actual PayPal link
-            }
-        }
-    </script>
-        
 
   </body>
     <script src="./Js/script.js"></script>

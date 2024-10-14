@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACCURATE PREDICTION SITE - Everyday Winning Tips</title>
+    <link rel="shortcut icon" href="/logo-a.svg" />
+    <!-- custom link -->
+    <!-- <link rel="stylesheet" href="./Css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="./Css/section.css"> -->
+    <link rel="stylesheet" href="/user/user.css">
+    <!-- Bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- font-awesome css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+     <!-- Include Flatpickr CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+     <!-- Include Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+ 
+     <!-- Google Font -->
+     <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    <div id="wrappers">
+        <div class="app-menu">
+            <div class="logo-box d-flex justify-content-between align-items-center mb-3">
+              <a href="/index.html" class="logo-dark d-flex align-items-center">
+                <img src="/image/logo-a.svg" alt="dark logo" class="logo-lg me-2">
+              </a>
+            </div>
+          
+            <div class="scrollbar h-100" data-simplebar="init">
+              <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
+                <div class="simplebar-content p-2">
+                  <ul class="menu">
+                    <li class="menu-item active">
+                      <a href="/user/dashboard.html" class="menu-link d-flex align-items-center">
+                        <span class="menu-icon">
+                         <i class="fa fa-home"></i>
+                        </span>
+                        <span class="menu-text">Dashboard</span>
+                      </a>
+                    </li>
+
+                    <li class="menu-item">
+                      <a href="/user/premium-tips.html" class="menu-link d-flex align-items-center">
+                        <span class="menu-icon">
+                          <i class="fa fa-lock"></i>
+                        </span>
+                        <span class="menu-text">Premium Plans</span>
+                      </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                      <a href="/free-predicition.html" class="menu-link d-flex align-items-center">
+                        <span class="menu-icon">
+                          <i class="fa fa-brain"></i>
+                        </span>
+                        <span class="menu-text">Prediction</span>
+                      </a>
+                    </li>
+
+                    <li class="menu-item">
+                      <a href="/user/premium-tips.html" class="menu-link d-flex align-items-center">
+                        <span class="menu-icon">
+                          <i class="fa fa-money-bill-transfer"></i>
+                        </span>
+                        <span class="menu-text">Upgrade/Make Payment</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class=" position-absolute bottom-0 start-0 w-100 p-3">
+                  <a href="#" class="d-flex align-items-center text-decoration-none bg-light rounded p-2">
+                      <i class="fa fa-sign-out me-2" style="color: #000;"></i>
+                      <strong class="text-dark" style="font-family: Inter; font-size: 14px;">Logout</strong>
+                  </a>
+               </div>
+                            
+              </div>
+            </div>
+        </div>
+        
+        <div class="content-page">
+            <!-- Navbar Section -->
+            <div class="navbar-custom">
+              <div class="topbar">
+                <div class="gap-1 topbar-menu d-flex align-items-center justify-content-between">
+                  <!-- Logo Section -->
+                  <div class="logo-box">
+                    <a href="https://betgenuine.com" class="logo-dark">
+                      <!-- <img src="https://betgenuine.com/assets/favicon.png" alt="dark logo" class="logo-lg"> -->
+                      <!-- <img src="/image/logo-a.svg" alt="small logo" class="logo-sm d-md-none d-block" style="width: 100px;"> -->
+                    </a>
+                  </div>
+                  <!-- Menu Toggle Button -->
+                  <button class="btn btn-outline-secondary">
+                    <i class="fa fa-bars"></i>
+                  </button>
+                </div>
+                
+                <!-- User and Upgrade Button -->
+                <ul class="topbar-menu d-flex align-items-center ms-auto">
+                  <li class="me-2">
+                    <a href="/user/premium-tips.html" class="btn btn-warning">Upgrade now</a>
+                  </li>
+                  <!-- User Dropdown -->
+                  <li class="dropdown">
+                    <a class="nav-link nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                      <img src="https://betgenuine.com/assets/face.png" alt="user-image" class="rounded-circle">
+                      <span class="ms-1 d-none d-md-inline-block text-dark">CHIDIMMA.... <i class="fa fa-chevron-down"></i></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end profile-dropdown">
+                      <a href="/user/profile.html" class="dropdown-item notify-item">
+                        <i class="fe-user"></i><span>My Account</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item notify-item">
+                        <i class="fe-log-out"></i><span>Logout</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          
+            <!-- Content Section -->
+            <div class="content px-0 px-lg-4">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-12 pt-3">
+                    <h2 class="page-title text-start">Dashboard</h2>
+                    <div class="wcdash d-flex align-items-center mt-3 bg-primary p-3 rounded">
+                      <div class="px-2">
+                        <h2 class="text-white">Hello CHIDIMMA EZINWA</h2>
+                        <p class="text-white">It's good to see you again</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- VIP Tips Section -->
+                <div class="row">
+                  <div class="col-lg-6 pt-3">
+                    <div class="wcdash-vip bg-dark text-white p-3 rounded d-flex justify-content-between">
+                      <div>
+                        <h2 class="hellotext">Premium VIP Tips</h2>
+                        <p>Access to Sure 2-3 Odds For 15-Days</p>
+                      </div>
+                      <div class="text-end">
+                        <a href="/user/premium-tips.html" class="btn btn-warning">Upgrade now</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-6 pt-3">
+                    <div class="wcdash-vip wcdash-vvip bg-secondary text-white p-3 rounded d-flex justify-content-between">
+                      <div>
+                        <h2 class="hellotext">Premium Special Tips</h2>
+                        <p>Access to Sure 2-3 Odds → Access to Sure 5-15 Odds </br> For 15 Days</p>
+                      </div>
+                      <div class="text-end">
+                        <a href="/user/premium-tips.html" class="btn btn-warning">Upgrade now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 pt-3">
+                    <div class="wcdash-vip wcdash-vvip bg-secondary text-white p-3 rounded d-flex justify-content-between">
+                      <div>
+                        <h2 class="hellotext">Premium Experts Tips</h2>
+                        <p>Access to Sure 2-3 Odds For 15-Days</p>
+                      </div>
+                      <div class="text-end">
+                        <a href="/user/premium-tips.html" class="btn btn-warning">Upgrade now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 pt-3">
+                    <div class="wcdash-vip bg-dark text-white p-3 rounded d-flex justify-content-between">
+                      <div>
+                        <h2 class="hellotext">Premium Investments Tips</h2>
+                        <p>Access to Sure 2-3 Odds For 15-Days</p>
+                      </div>
+                      <div class="text-end">
+                        <a href="/user/premium-tips.html" class="btn btn-warning">Upgrade now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+        
+
+  </body>
+    <script src="/user/user.js"></script>
+    <!-- <script src="./Js/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</html>

@@ -137,9 +137,9 @@
         
                         <!-- Right aligned buttons -->
                         <div class="d-flex">
-                            <a href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
-                            <a href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="account-btn" href="/user/dashboard.html" class="btn navbar-btn btn-danger">Account</a>
                         </div>
+                        
                     </div>
                 </div>
             </nav>
@@ -154,8 +154,8 @@
                             <div class="py-5">
                                 <br> <br>
                                 <h4 class="headerTitle">
-                                    <a href="/" class="breadcrumb-link">Home</a> / 
-                                    <span class="current-page">Package</span>
+                                    <a href="/user/dashboard.html" class="breadcrumb-link">Home</a> / 
+                                    <span class="current-page">Premium-Plan</span>
                                 </h4>
                                 <div class="container">
                                     <div class="row">
@@ -274,27 +274,27 @@
                 </div>
 
                 <div class="row align-items-center align-items-xl-stretch flex-xl-row justify-content-center" style="display: none;" id="pricing-plans">
-                    <!-- free Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 free">
+                    <!-- Vip Plan -->
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 pricing-cardd fleet vip">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
-                            <h2>Free Plan</h2>
+                            <h2>VIP Plan</h2>
                             <div class="my-2">
                                 <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
-                                <span id="price-amount" class=" price-amount fs-1 text-dark fw-bolder">0.00</span>
-                                <span class="fs-3 text-body-secondary">/mo</span>
+                                <span id="price-amount price-amount-1" class="price-amount fs-1 text-dark fw-bolder">35.00</span>
                             </div>
                             <p class="lead">
-                                Access to 1.5 Odds Banker for free
+                                Access to Sure 2-3 Odds For 15-Days
                             </p>
+                            <span class="fifth-head">N.B One betslip (ticket) per day</span>
                             <hr class="opacity-10">
                             <h4 class="my-2">Features include:</h4>
-                            <div class="my-1 text-body-secondary">
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Direct win prediction</span>
+                                <span>Access to top VIP tips</span>
                             </div>
                             <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
@@ -302,69 +302,43 @@
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Sokafans / Correct Score</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>Over1.5 / BTTS</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>Double Chance</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>(HT) Result</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>Mega / Midweek Jackpot</span>
+                                <span>High winning rates</span>
                             </div>
                             <div class="mt-auto">
-                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
-                                    Subscribe
-                                </button>
+                                <select id="vip-duration" class="form-control text-dark" wire:model="vip" wire:change="Selectedvip">
+                                    <option value="1">One Week</option>
+                                    <option value="3">One Month</option>
+                                    <option value="5">Three Months</option>
+                                    <option value="7">6 Month</option>
+                                    <option value="12">One year</option>
+                                </select>
+                                <a href="/payment.html" class="btn btn-primary text-white mt-4 w-100">
+                                    PAY NOW
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Silver Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 special">
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 pricing-cardd fleet special">
                         <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
                             <h2>Special Plan</h2>
                             <div class="my-2">
                                 <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
-                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">20.3</span>
-                                <span class="fs-3 text-body-secondary">/mo</span>
+                                <span id="price-amount price-amount-2" class="price-amount fs-1 text-dark fw-bolder">85.00</span>
                             </div>
                             <p class="lead">
-                                Access to 3 Odds Banker for 1 Week
+                                Access to Sure 2-3 Odds For 15-Days
                             </p>
+                            <span class="fifth-head">N.B One betslip (ticket) per day</span>
                             <hr class="opacity-10">
                             <h4 class="my-2">Features include:</h4>
-                            <div class="my-1 text-body-secondary">
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Sure 2</span>
+                                <span>Access to top VIP tips</span>
                             </div>
                             <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
@@ -372,134 +346,111 @@
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Sure 3</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>5 ODDS</span>
-                            </div>
-                            <div class="mt-2 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>10 ODDS</span>
+                                <span>High winning rates</span>
                             </div>
                             <div class="mt-auto">
-                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
-                                    Subscribe
-                                </button>
+                                <select id="vip-duration" class="form-control text-dark" wire:model="vip" wire:change="Selectedvip">
+                                    <option value="1">One Week</option>
+                                    <option value="3">One Month</option>
+                                    <option value="5">Three Months</option>
+                                    <option value="7">6 Month</option>
+                                    <option value="12">One year</option>
+                                </select>
+                                <a href="/payment.html" class="btn btn-primary text-white mt-4 w-100">
+                                    PAY NOW
+                                </a>
                             </div>
                         </div>
                     </div>
-            
-                    <!-- Gold Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 vip">
-                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
-                            <h2>Vip Plan</h2>
+
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 pricing-cardd fleet expert">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
+                            <h2>Expert Plan</h2>
                             <div class="my-2">
                                 <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
-                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">56.3</span>
-                                <span class="fs-3 text-body-secondary">/mo</span>
+                                <span id="price-amount price-amount-3" class="price-amount fs-1 text-dark fw-bolder">56.00</span>
                             </div>
                             <p class="lead">
-                                Access to 5 - 10 Odds Daily
+                                Access to Sure 2-3 Odds For 15-Days
                             </p>
+                            <span class="fifth-head">N.B One betslip (ticket) per day</span>
                             <hr class="opacity-10">
-                            <h4 class="my-2">All features of Silver Plan plus:</h4>
-                            <div class="my-1 text-body-secondary">
+                            <h4 class="my-2">Features include:</h4>
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Over 2.5 /Draw</span>
+                                <span>Access to top VIP tips</span>
                             </div>
-
-                            <div class="my-1 text-body-secondary">
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>HalfTime/FullTime</span>
+                                <span>High winning rates</span>
                             </div>
-                            <div class="my-1 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>Combo</span>
-                            </div>
-                            <div class="my-1 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>(HT) Goals</span>
-                            </div>
-                            <div class="my-1 text-body-secondary">
-                                <span class="text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-                                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
-                                    </svg>
-                                </span>
-                                <span>Most Scoring Half</span>
-                            </div>
-                            
                             <div class="mt-auto">
-                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
-                                    Subscribe
-                                </button>
+                                    <select id="vip-duration" class="form-control text-dark" wire:model="vip" wire:change="Selectedvip">
+                                        <option value="1">One Week</option>
+                                        <option value="3">One Month</option>
+                                        <option value="5">Three Months</option>
+                                        <option value="7">6 Month</option>
+                                        <option value="12">One year</option>
+                                    </select>
+                                <a href="/payment.html" class="btn btn-primary text-white mt-4 w-100">
+                                    PAY NOW
+                                </a>
                             </div>
                         </div>
                     </div>
-            
-                    <!-- Diamond Plan -->
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 investment">
-                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4">
+
+                    <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 mt-5 pricing-cardd fleet investment">
+                        <div class="p-4 h-100 d-flex flex-column bg-body-tertiary shadow rounded-4 plan">
                             <h2>Investment Plan</h2>
                             <div class="my-2">
                                 <span id="currency-symbol" class="currency-symbol fs-1 text-body-secondary fw-bold">$</span>
-                                <span id="price-amount" class="price-amount fs-1 text-dark fw-bolder">80</span>
-                                <span class="fs-3 text-body-secondary">/mo</span>
+                                <span id="price-amount price-amount-4" class="price-amount fs-1 text-dark fw-bolder">80.00</span>
                             </div>
                             <p class="lead">
-                                Sure 1.60 - 2.50 Odds Daily
+                                Access to Sure 2-3 Odds For 15-Days
                             </p>
+                            <span class="fifth-head">N.B One betslip (ticket) per day</span>
                             <hr class="opacity-10">
-                            <h4 class="my-2">All features of Gold Plan plus:</h4>
-                            <div class="my-1 text-body-secondary">
+                            <h4 class="my-2">Features include:</h4>
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Rollover (1.30-2.00)</span>
+                                <span>Access to top VIP tips</span>
                             </div>
-                            <div class="my-1 text-body-secondary">
+                            <div class="mt-2 text-body-secondary">
                                 <span class="text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
                                         <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"></path>
                                     </svg>
                                 </span>
-                                <span>Investment (2.10-3.50)</span>
+                                <span>High winning rates</span>
                             </div>
-                            
                             <div class="mt-auto">
-                                <button onclick="handleSubscribe()" class="btn btn-primary text-white mt-4 w-100">
-                                    Subscribe
-                                </button>
+                                <select id="vip-duration" class="form-control text-dark" wire:model="vip" wire:change="Selectedvip">
+                                    <option value="1">One Week</option>
+                                    <option value="3">One Month</option>
+                                    <option value="5">Three Months</option>
+                                    <option value="7">6 Month</option>
+                                    <option value="12">One year</option>
+                                </select>
+                                <a href="/payment.html" class="btn btn-primary text-white mt-4 w-100">
+                                    PAY NOW
+                                </a>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             
@@ -628,9 +579,9 @@
 
             // Assign base prices for each plan
             const prices = {
-                free: 0, 
-                special: 20.3,
-                vip: 56.3,
+                vip: 35.00, 
+                special: 80.00,
+                expert: 56.00,
                 investment: 80
             };
 
@@ -660,23 +611,42 @@
     </script>
 
     <script>
-        // Function to check if the user is logged in
-        function isLoggedIn() {
-            return localStorage.getItem("loggedIn") === "true";
-        }
+      
+        const vipDurationSelect = document.getElementById('vip-duration');
+        
+   
+        const priceAmount1 = document.getElementById('price-amount-1'); 
+        const priceAmount2 = document.getElementById('price-amount-2'); 
+        const priceAmount3 = document.getElementById('price-amount-3'); 
+        const priceAmount4 = document.getElementById('price-amount-4'); 
 
-        // Function to handle subscribe button click
-        function handleSubscribe() {
-            if (isLoggedIn()) {
-                window.location.href = "/payment.html"; 
-            } else {
-                window.location.href = "/login.html"; 
-            }
-        }
+    
+        const basePrice1 = 35.00; 
+        const basePrice2 = 80.00; 
+        const basePrice3 = 56.00; 
+        const basePrice4 = 80.00; 
+
+        // Handle duration change and apply multiplier to each plan's base price
+        vipDurationSelect.addEventListener('change', function() {
+            const multiplier = parseInt(this.value); 
+
+            // Calculate new prices for each plan
+            const newPrice1 = (basePrice1 * multiplier).toFixed(2);
+            const newPrice2 = (basePrice2 * multiplier).toFixed(2);
+            const newPrice3 = (basePrice3 * multiplier).toFixed(2);
+            const newPrice4 = (basePrice4 * multiplier).toFixed(2);
+
+            // Update the price displayed on the page for each plan
+            priceAmount1.textContent = newPrice1;
+            priceAmount2.textContent = newPrice2;
+            priceAmount3.textContent = newPrice3;
+            priceAmount4.textContent = newPrice4;
+        });
     </script>
 
   </body>
     <script src="/Js/script.js"></script>
+    <script src="/user/user.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
