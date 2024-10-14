@@ -49,3 +49,29 @@ window.addEventListener('click', (e) => {
 // function checkLoginStatus() {
 //   return !!localStorage.getItem('/user/premium-tips.html'); 
 // }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutBtn = document.getElementById("logout-btn");
+
+  // Check if the user is logged in
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn === "true") {
+      // Show logout button if logged in
+      logoutBtn.style.display = "block";
+
+      // Handle logout
+      logoutBtn.addEventListener("click", function (event) {
+          event.preventDefault(); 
+
+          // Clear login state
+          localStorage.removeItem("isLoggedIn");
+
+         
+          window.location.href = "../login.html";
+      });
+  } else {
+      logoutBtn.style.display = "none";
+  }
+});

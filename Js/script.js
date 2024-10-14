@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("isLoggedIn", "true");
 
             // Redirect to the dashboard
-            window.location.href = "/user/dashboard.html";
+            window.location.href = "./user/dashboard.html";
         } else {
             alert("Invalid email or password!");
         }
