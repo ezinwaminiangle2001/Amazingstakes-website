@@ -511,15 +511,11 @@ body {
 } */
 
 @media (max-width: 767px) {
-<<<<<<< HEAD
   .fixed-top {
     position: absolute !important;
   }
   
   .page-top{
-=======
-  .page-top {
->>>>>>> 291704dc51e99670120bbe6546cbe2139204ad15
     margin-top: 20%;
   }
 
