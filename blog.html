@@ -37,7 +37,7 @@
         
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav m-auto">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="/index.html">HOME <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
@@ -52,15 +52,22 @@
                             <li class="nav-item">
                                 <a class="nav-link" target="_blank" href="https://www.flashscore.com.ng/">LIVESCORE</a>
                             </li>
-        
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">SURE TIP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">TAKE THE RISK</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">(HT) RESULTS</a>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="/blog.html">BLOG</a>
                             </li>
-
+        
                             <!-- Dropdown -->
                             <li class="nav-item dropdowns">
-                                <a href="#" class="nav-link" id="moreDropdown" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false"> More
+                                <a href="#" class="nav-link" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More
                                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="moreDropdown">
@@ -106,13 +113,16 @@
                                         </div>
                                     </div>
                                 </ul>
-                            </li>                           
+                            </li>
+                            
+                            
                         </ul>
         
                         <!-- Right aligned buttons -->
                         <div class="d-flex">
-                            <a href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
-                            <a href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="login-btn" href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
+                            <a id="register-btn" href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="account-btn" href="/user/dashboard.html" class="btn navbar-btn btn-danger d-none">Account</a>
                         </div>
                     </div>
                 </div>

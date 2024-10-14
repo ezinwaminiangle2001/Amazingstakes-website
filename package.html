@@ -54,10 +54,10 @@
         
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav m-auto">
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" href="/index.html">HOME <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="/free-predicition.html">FREE PREDICTIONS</a>
                             </li>
                             <li class="nav-item">
@@ -93,7 +93,7 @@
                                             <ul>
                                                 <li class="dropdown-header">Free Plan</li>
                                                 <li><a class="dropdown-item" href="/free-predicition.html"><i class="fa fa-check" aria-hidden="true"></i> View All Matches</a></li>
-                                                <li><a class="dropdown-item" href="news"><i class="fa fa-check" aria-hidden="true"></i> News</a></li>
+                                                <li><a class="dropdown-item" href="/blog.html"><i class="fa fa-check" aria-hidden="true"></i> News</a></li>
                                                 <li><a class="dropdown-item" href="/more/over1.5.html"><i class="fa fa-check" aria-hidden="true"></i> Over 1.5</a></li>
                                                 <li><a class="dropdown-item" href="/more/Double-chance.html"><i class="fa fa-check" aria-hidden="true"></i> Double Chance</a></li>
                                                 <li><a class="dropdown-item" href="/more/half-time.html"><i class="fa fa-check" aria-hidden="true"></i> Halftime Results</a></li>
@@ -137,8 +137,9 @@
         
                         <!-- Right aligned buttons -->
                         <div class="d-flex">
-                            <a href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
-                            <a href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="login-btn" href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
+                            <a id="register-btn" href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="account-btn" href="/user/dashboard.html" class="btn navbar-btn btn-danger d-none">Account</a>
                         </div>
                     </div>
                 </div>
@@ -659,21 +660,24 @@
         }
     </script>
 
-    <script>
-        // Function to check if the user is logged in
-        function isLoggedIn() {
-            return localStorage.getItem("loggedIn") === "true";
-        }
+<script>
+    // Function to check if the user is logged in
+    function isLoggedIn() {
+        return localStorage.getItem("loggedIn") === "true";
+    }
 
-        // Function to handle subscribe button click
-        function handleSubscribe() {
-            if (isLoggedIn()) {
-                window.location.href = "/payment.html"; 
-            } else {
-                window.location.href = "/login.html"; 
-            }
+    // Function to handle subscribe button click
+    function handleSubscribe() {
+        if (isLoggedIn()) {
+            // Redirect to payment page if logged in
+            window.location.href = "/payment.html"; 
+        } else {
+            // Redirect to login page if not logged in
+            window.location.href = "/login.html"; 
         }
-    </script>
+    }
+</script>
+
 
   </body>
     <script src="/Js/script.js"></script>

@@ -135,8 +135,9 @@
         
                         <!-- Right aligned buttons -->
                         <div class="d-flex">
-                            <a href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
-                            <a href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="login-btn" href="/login.html" class="btn navbar-btn btn-success me-2">Login</a>
+                            <a id="register-btn" href="/register.html" class="btn navbar-btn btn-danger">Register</a>
+                            <a id="account-btn" href="/user/dashboard.html" class="btn navbar-btn btn-danger d-none">Account</a>
                         </div>
                     </div>
                 </div>
@@ -530,14 +531,14 @@
     </div>
 
 
-    <!-- <script>
+     <script>
         // Simulate checking if user is logged in
         const isLoggedIn = false;
       
         if (!isLoggedIn) {
             window.location.href = '/login.html';
         }
-    </script> -->
+    </script> 
 
   </body>
     <script src="/Js/script.js"></script>

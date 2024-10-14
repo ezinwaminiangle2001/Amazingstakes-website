@@ -92,7 +92,7 @@
                 </div>
 
                 <div class=" position-absolute bottom-0 start-0 w-100 p-3">
-                  <a href="#" class="d-flex align-items-center text-decoration-none bg-light rounded p-2">
+                  <a href="#" class="d-flex align-items-center text-decoration-none bg-light rounded p-2" id="logout-btn">
                       <i class="fa fa-sign-out me-2" style="color: #000;"></i>
                       <strong class="text-dark" style="font-family: Inter; font-size: 14px;">Logout</strong>
                   </a>
@@ -136,8 +136,9 @@
                         <i class="fe-user"></i><span>My Account</span>
                       </a>
                       <div class="dropdown-divider"></div>
-                      <a href="#" class="dropdown-item notify-item">
-                        <i class="fe-log-out"></i><span>Logout</span>
+                      <a href="#" class="dropdown-item notify-item" id="logout-btn">
+                        <i class="fa fa-sign-out me-2" style="color: #000;"></i>
+                        <strong class="text-dark" style="font-family: Inter; font-size: 14px;">Logout</strong>
                       </a>
                     </div>
                   </li>
@@ -216,8 +217,34 @@
         </div>
     </div>
 
-        
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const logoutBtn = document.getElementById("logout-btn");
+  
+          // Check if the user is logged in
+          const isLoggedIn = localStorage.getItem("isLoggedIn");
+  
+          if (isLoggedIn === "true") {
+              // Show logout button if logged in
+              logoutBtn.style.display = "block";
+  
+              // Handle logout
+              logoutBtn.addEventListener("click", function (event) {
+                  event.preventDefault(); 
+  
+                  // Clear login state
+                  localStorage.removeItem("isLoggedIn");
+  
+                 
+                  window.location.href = "/login.html";
+              });
+          } else {
+              logoutBtn.style.display = "none";
+          }
+      });
+  </script>
+  
   </body>
     <script src="/user/user.js"></script>
     <!-- <script src="./Js/script.js"></script> -->

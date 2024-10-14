@@ -151,5 +151,50 @@ function changePage(page) {
 
 
 // free prediction
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.querySelector(".login-form");
+    const loginBtn = document.getElementById("login-btn");
+    const registerBtn = document.getElementById("register-btn");
+    const accountBtn = document.getElementById("account-btn");
 
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        const email = loginForm.email.value;
+        const password = loginForm.pswd.value;
+
+        const defaultEmail = "user@example.com";
+        const defaultPassword = "password123";
+
+        if (email === defaultEmail && password === defaultPassword) {
+            // Show account button and hide login/register buttons
+            loginBtn.classList.add("d-none");
+            registerBtn.classList.add("d-none");
+            accountBtn.classList.remove("d-none");
+
+            // Store login state
+            localStorage.setItem("isLoggedIn", "true");
+
+            // Redirect to the dashboard
+            window.location.href = "/user/dashboard.html";
+        } else {
+            alert("Invalid email or password!");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginBtn = document.getElementById("login-btn");
+    const registerBtn = document.getElementById("register-btn");
+    const accountBtn = document.getElementById("account-btn");
+
+    // Check if the user is logged in
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+        // Hide login and register buttons
+        loginBtn.classList.add("d-none");
+        registerBtn.classList.add("d-none");
+        accountBtn.classList.remove("d-none");
+    }
+});
