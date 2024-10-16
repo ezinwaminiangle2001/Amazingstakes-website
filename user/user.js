@@ -75,3 +75,55 @@ document.addEventListener("DOMContentLoaded", function () {
       logoutBtn.style.display = "none";
   }
 });
+
+
+
+const toggleChatbot = document.getElementById('toggleChatbot');
+const chatbot = document.getElementById('chatbot');
+const usersInput = document.getElementById('usersInput');
+const messages = document.getElementById('messages');
+
+toggleChatbot.addEventListener('click', () => {
+    chatbot.style.display = chatbot.style.display === 'none' || chatbot.style.display === '' ? 'block' : 'none';
+});
+
+usersInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter' && usersInput.value.trim() !== '') {
+        const userMessage = usersInput.value.trim();
+        addMessage(userMessage, 'user-message');
+        usersInput.value = '';
+        // Auto-respond
+        autoRespond(userMessage);
+    }
+});
+
+function addMessage(text, className) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('messages', className);
+    messageDiv.innerText = text;
+    messages.appendChild(messageDiv);
+    messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+}
+
+function autoRespond(userMessage) {
+    let botResponse;
+
+    const responses = {
+        "hi": "Hello! How can I help you today?",
+        "how are you?": "I'm just a bot, but thanks for asking!",
+        "what's your name?": "I'm your friendly chatbot!",
+        "help": "Sure! What do you need help with?",
+        "bye": "Goodbye! Have a great day!",
+        "default": "I'm sorry, I don't understand."
+    };
+
+    const normalizedMessage = userMessage.toLowerCase().trim();
+
+    // Check for a predefined response
+    botResponse = responses[normalizedMessage] || responses["default"];
+
+    // Simulate a delay before responding
+    setTimeout(() => {
+        addMessage(botResponse, 'bot-message');
+    }, 1000);
+}

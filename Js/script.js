@@ -1,19 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const navLinks = document.querySelectorAll('.navbar-nav li a');
-
-//     navLinks.forEach(link => {
-//         link.addEventListener('click', function () {
-//             // Remove 'active' class from all <li> elements
-//             document.querySelectorAll('.navbar-nav li').forEach(li => {
-//                 li.classList.remove('active');
-//             });
-
-//             // Add 'active' class to the clicked <li> element
-//             this.parentElement.classList.add('active');
-//         });
-//     });
-// });
-
 document.querySelector('.navbar-toggler').addEventListener('click', function () {
     let icon = document.getElementById('navbar-toggler-icon');
     if (icon.classList.contains('navbar-toggler-icon')) {
@@ -198,3 +182,81 @@ document.addEventListener("DOMContentLoaded", function () {
         accountBtn.classList.remove("d-none");
     }
 });
+
+
+// Show or hide the button based on scroll position
+window.onscroll = function() {
+    const button = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+// Smooth scroll to top
+document.getElementById("backToTop").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
+
+// Chatbot toggle
+const chatbot = document.getElementById('chatbot');
+const toggleChatbot = document.getElementById('toggleChatbot');
+toggleChatbot.onclick = function() {
+    chatbot.style.display = chatbot.style.display === 'none' || chatbot.style.display === '' ? 'block' : 'none';
+};
+
+// Simple chatbot functionality with auto-responses
+const messages = document.getElementById('messages');
+const userInput = document.getElementById('usersInput');
+
+userInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && userInput.value.trim() !== '') {
+        const userMessage = userInput.value.trim();
+        addMessage(userMessage, 'user-message');
+        userInput.value = '';
+        // Simulate a bot response
+        autoRespond(userMessage);
+    }
+});
+
+function addMessage(text, className) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('messages', className);
+    messageDiv.innerText = text;
+    messages.appendChild(messageDiv);
+    messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+}
+
+function autoRespond(userMessage) {
+    let botResponse;
+
+    // Simple response logic
+    const responses = {
+        "hello": "Hello! How can I help you today?",
+        "how are you?": "I'm just a bot, but I'm here to help you!",
+        "what is your name?": "I'm a simple chatbot here to assist you.",
+        "bye": "Goodbye! Have a great day!",
+        "default": "I'm sorry, I don't understand that."
+    };
+
+    const normalizedMessage = userMessage.toLowerCase().trim();
+
+    botResponse = responses[normalizedMessage] || responses["default"];
+
+    setTimeout(() => {
+        addMessage(botResponse, 'bot-message');
+    }, 1000);
+}
+
+ // Hide the loading spinner after 5 seconds (5000 milliseconds)
+//  setTimeout(function() {
+//     document.getElementById("loading").style.display = "none";
+//     document.querySelector('.wrapper').style.display = 'block'; // Show the page content
+//   }, 5000); // 5000ms = 5 seconds
+
+//   // Alternatively, hide the loader when the page is fully loaded (whichever happens first)
+//   window.onload = function () {
+//     document.getElementById("loading").style.display = "none";
+//     document.querySelector('.wrapper').style.display = 'block';
+//   };

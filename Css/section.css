@@ -391,10 +391,10 @@ a {
 
 /* Styling for the Sponsors section */
 /* Container and Section */
-.sponsors-section {
+/* .sponsors-section {
     padding: 50px 0;
     background-color: #ebebeb;
-}
+} */
 
 .sponsors-section h5 {
     text-align: center;
@@ -402,7 +402,7 @@ a {
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;
-    color: #000;
+    color: #ebebeb;
 }
 
 /* Carousel Item Styling */
@@ -423,7 +423,7 @@ a {
 .sponsors-list li {
     margin: 0 15px;
     padding: 10px;
-    background-color: #24a4;
+    background-color: #ebebeb;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
